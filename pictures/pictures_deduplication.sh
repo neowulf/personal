@@ -2,6 +2,7 @@
 
 BASEDIR=$1
 MD5SUM_FILE="md5sum_pictures.txt"
+QUARANTINE_DIR="~/Documents/quarantine"
 
 function gen_md5sum() {
    # Generate the md5sum of the all of the files
@@ -9,8 +10,13 @@ function gen_md5sum() {
    find ${BASEDIR} -type f -exec md5sum {} \; >> $MD5SUM_FILE 
 }
 
-function deduplication() {
-   
+function deduplicate() {
+   FILE=$1
+   mkdir -p $QUARANTINE_DIR
+   uniq -c $FILE | grep -v '^ *1 ' > duplicate_$FILE
+   for duplicate_file in `awk '{print $2}'`; do 
+      mv $duplicate_file $QUARANTINE_DIR
+   done    
 }
 
 # While there are no more duplicates
@@ -34,8 +40,3 @@ function deduplicate_entries() {
       fi
    done
 }
-
-
-
-
-
