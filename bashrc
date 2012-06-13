@@ -2,8 +2,33 @@
 
 export LC_CTYPE=C
 
-PS1='`date "+%H%M.%S"` \u@\h:\W\$ '
+[ -z "$PS1" ] && return
 
+###############################
+## FUNCTIONS
+###############################
+function videa() {
+ idea `pwd`/$1
+}
+
+function parse_git_branch_and_add_brackets {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
+}
+
+function date_txt {
+  #date "+%H%M.%S"
+  date +%H%M.%S
+}
+
+###############################
+## PROMPT
+###############################
+PS1='`date "+%H%M.%S"` \u@\h:\W\$ '
+PS1="\$(date_txt) \u@\h:\W\[\033[0;32m\]\$(parse_git_branch_and_add_brackets)\[\033[0m\] \$ "
+
+###############################
+## HISTORY
+###############################
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace:erasedups
@@ -20,6 +45,7 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
+export LESS="-R"
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # enable color support of ls and also add handy aliases
@@ -56,25 +82,17 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-#################################
-#
-#	User Defined
-#
-#################################
-
 ###############################
 ## ENV VARIABLES
 ###############################
-
 export EDITOR="vim"
 export SVN_EDITOR="vim"
-export JDK_HOME="/usr/lib/jvm/java-6-sun"
-export JAVA_HOME="/usr/lib/jvm/java-6-sun"
-export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export MAVEN_HOME="/usr/share/maven2"
-export M2_HOME="/usr/share/maven2"
+#export JDK_HOME="/usr/lib/jvm/java-6-sun"
+#export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+export JAVA_HOME="/Library/Java/Home"
 
-export PATH="${PATH}:/var/lib/gems/1.9.1/bin"
+export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
+export PATH="/usr/local/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
