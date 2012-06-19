@@ -2,7 +2,7 @@
 
 export LC_CTYPE=C
 
-[ -z "$PS1" ] && return
+#[ -z "$PS1" ] && return
 
 ###############################
 ## FUNCTIONS
@@ -48,22 +48,11 @@ shopt -s checkwinsize
 export LESS="-R"
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -85,14 +74,16 @@ fi
 ###############################
 ## ENV VARIABLES
 ###############################
-export EDITOR="vim"
+#export EDITOR="vim"
+export EDITOR='mate -w'
 export SVN_EDITOR="vim"
 #export JDK_HOME="/usr/lib/jvm/java-6-sun"
 #export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 export JAVA_HOME="/Library/Java/Home"
+export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/binscripts:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -102,13 +93,15 @@ alias sc="enclock  && gnome-screensaver-command --lock"
 alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
 
 alias ack="ack-grep"
+alias browse='nautilus'
 alias grep="grep --color -n --exclude=\*.svn\*"
+#alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
+alias ls='ls -G'
 alias mgrep="grep -v grep | grep"
+alias pp="lsof -i -P"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
-alias browse='nautilus'
-alias pp="lsof -i -P"
-#alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
+alias vi="vim"
 
 function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }

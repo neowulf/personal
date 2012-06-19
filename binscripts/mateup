@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# http://wiki.macromates.com/Main/SubversionCheckout
+
+cd /Library/Application\ Support/TextMate 
+export LC_CTYPE=en_US.UTF-8
+svn update
+osascript -e 'tell app "TextMate" to reload bundles'
