@@ -7,17 +7,15 @@ export LC_CTYPE=C
 ###############################
 ## FUNCTIONS
 ###############################
-function videa() {
- idea `pwd`/$1
+#function videa() { idea `pwd`/$1 }
+function parse_git_branch_and_add_brackets { 
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/' 
 }
-
-function parse_git_branch_and_add_brackets {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
+function date_txt { 
+  date +%H%M.%S 
 }
-
-function date_txt {
-  #date "+%H%M.%S"
-  date +%H%M.%S
+function memcache_flush_all { 
+  echo "flush_all" | nc localhost 11211 
 }
 
 ###############################
@@ -53,7 +51,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -69,7 +66,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
 
 ###############################
 ## ENV VARIABLES
@@ -88,10 +84,6 @@ export PATH="/usr/local/bin:/usr/local/binscripts:${PATH}"
 ###############################
 ## COMMON UTILITIES
 ###############################
-alias enclock="fusermount -u ~/.passwords"
-alias sc="enclock  && gnome-screensaver-command --lock"
-alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
-
 alias ack="ack-grep"
 alias browse='nautilus'
 alias grep="grep --color -n --exclude=\*.svn\*"
@@ -99,9 +91,15 @@ alias grep="grep --color -n --exclude=\*.svn\*"
 alias ls='ls -G'
 alias mgrep="grep -v grep | grep"
 alias pp="lsof -i -P"
+# gsed is a sed from cellar
+alias sed="gsed"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
 alias vi="vim"
 
-function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
-function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
+alias enclock="fusermount -u ~/.passwords"
+alias sc="enclock  && gnome-screensaver-command --lock"
+alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
+# function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
+# function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
+
