@@ -17,6 +17,9 @@ function date_txt {
 function memcache_flush_all { 
   echo "flush_all" | nc localhost 11211 
 }
+function killtcs {
+  ps -ef | \grep Bootstrap | \grep -v 'grep' | awk '{print $2}' | xargs kill -9
+}
 
 ###############################
 ## PROMPT
@@ -76,7 +79,8 @@ export SVN_EDITOR="vim"
 #export JDK_HOME="/usr/lib/jvm/java-6-sun"
 #export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 export JAVA_HOME="/Library/Java/Home"
-export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
+# export GIT_EDITOR="mate2 --name 'Git Commit Message' -w -l 1"
+export GIT_EDITOR="mate -w -l 1"
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
 export PATH="/usr/local/bin:/usr/local/binscripts:${PATH}"

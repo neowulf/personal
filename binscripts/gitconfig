@@ -1,0 +1,22 @@
+[user]
+	name = siva kommuri
+	email = siva.kommuri@palm.com
+[core]
+	excludesfile = /home/siva/.gitexcludes
+[diff]
+	#external = git-meld
+[alias]
+   branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
+   cd-root = rev-parse --show-cdup
+   #http://blog.tfnico.com/2010/11/git-svn-mirror-for-multiple-branches.html
+   upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
+   #sudo ln -s  ~/palm/user_rep/skommuri_tr/git/git-svn-diff.sh /usr/local/bin/git-svn-diff
+   svn-branch-patch = !git-svn-diff > `git cd-root``git branch-name`.patch
+[rerere]
+	enabled = 1
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 700x550+2818+594
+	history-view-vpane-position = 506
+	main-window-view = HistoryView
+	file-view-vpane-position = 496
