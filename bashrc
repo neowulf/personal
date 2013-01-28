@@ -8,17 +8,30 @@ export LC_CTYPE=C
 ## FUNCTIONS
 ###############################
 #function videa() { idea `pwd`/$1 }
+
 function parse_git_branch_and_add_brackets { 
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/' 
 }
+
 function date_txt { 
   date +%H%M.%S 
 }
+
 function memcache_flush_all { 
   echo "flush_all" | nc localhost 11211 
 }
+
 function killtcs {
   ps -ef | \grep Bootstrap | \grep -v 'grep' | awk '{print $2}' | xargs kill -9
+}
+
+function od { 
+  opendiff $1 .svn/text-base/$1.svn-base; 
+}
+
+function restartvpn {
+  sudo launchctl stop com.apple.racoon
+  sudo launchctl start com.apple.racoon
 }
 
 ###############################
@@ -39,7 +52,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
-HISTFILESIZE=2000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -83,7 +96,7 @@ export JAVA_HOME="/Library/Java/Home"
 export GIT_EDITOR="mate -w -l 1"
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:/usr/local/binscripts:${PATH}"
+export PATH="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine:/usr/local/bin:/usr/local/binscripts:/usr/local/binscripts/git-aliae-bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -94,6 +107,7 @@ alias grep="grep --color -n --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
 alias ls='ls -G'
 alias mgrep="grep -v grep | grep"
+alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
 # gsed is a sed from cellar
 alias sed="gsed"
@@ -107,3 +121,4 @@ alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwo
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
 
+alias "ij=open -a /Applications/IntelliJ\ IDEA\ 12.app"

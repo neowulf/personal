@@ -1,6 +1,9 @@
 ###
 # git checkout --track -b CS2606_appwhitelisting mirror/trunk
+# git checkout --track -b production_R2_hpitmobility mirror/dev/sivakommuri/production_R2_hpitmobility
 # git checkout -t mirror/production
+# [production_R2_hpitmobility] $ git rebase mirror/production_R2_hpitmobility
+# git clean -d -f .
 ###
 
 [user]
@@ -8,6 +11,7 @@
 	email = snv.kommuri@gmail.com
 [core]
 	excludesfile = /Users/sivakom/.gitignore_global
+	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -37,7 +41,7 @@
 	
 	######
 	# Experimental
-	#sudo ln -s  ~/palm/user_rep/skommuri_tr/git/git-svn-diff.sh /usr/local/bin/git-svn-diff
+	#sudo ln -s  /Users/sivakom/Documents/opensource/personal/binscripts/git-svn-diff.sh /usr/local/bin/git-svn-diff
 	ff-mirror = merge --ff-only refs/remotes/mirror/`git branch-name`
 [rerere]
 	enabled = 1
