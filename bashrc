@@ -92,6 +92,7 @@ export SVN_EDITOR="vim"
 #export JDK_HOME="/usr/lib/jvm/java-6-sun"
 #export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 export JAVA_HOME="/Library/Java/Home"
+export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 # export GIT_EDITOR="mate2 --name 'Git Commit Message' -w -l 1"
 export GIT_EDITOR="mate -w -l 1"
 
@@ -101,7 +102,6 @@ export PATH="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/Google
 ###############################
 ## COMMON UTILITIES
 ###############################
-alias ack="ack-grep"
 alias browse='nautilus'
 alias grep="grep --color -n --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"

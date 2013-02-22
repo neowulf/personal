@@ -2,7 +2,20 @@
 
 # http://wiki.macromates.com/Main/SubversionCheckout
 
-cd /Library/Application\ Support/TextMate 
+pushd /Library/Application\ Support/TextMate/Bundles
 export LC_CTYPE=en_US.UTF-8
 svn update
+echo "--Textmate bundles updated..."
+echo
+
+cd groovy.tmbundle
+git pull origin master
+echo "--Textmate groovy bundle updated..."
+
+# hg clone https://bitbucket.org/croach/json.tmbundle
+cd ../json.tmbundle
+hg pull
+echo "--Textmate json bundle updated..."
+
+popd
 osascript -e 'tell app "TextMate" to reload bundles'
