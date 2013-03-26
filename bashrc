@@ -57,6 +57,8 @@ function restartvpn {
 ## PROMPT
 ###############################
 PS1='`date "+%H%M.%S"` \u@\h:\W\$ '
+# Mint Flavor
+PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]"
 PS1="\$(date_txt) \u@\h:\W\[\033[0;32m\]\$(parse_git_branch_and_add_brackets)\[\033[0m\] \$ "
 
 ###############################
@@ -80,11 +82,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 export LESS="-R"
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -127,20 +124,17 @@ export PATH="/usr/local/bin:/usr/local/binscripts:/usr/local/binscripts/git-alia
 ###############################
 
 if [[ $platform == 'linux' ]]; then
-	export EDITOR="vim"
-	export SVN_EDITOR="vim"
-	export JDK_HOME="/usr/lib/jvm/java-6-sun"
-	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+	alias ls='ls --color=auto'
 elif [[ $platform == 'macosx' ]]; then
 	# gsed is a sed from cellar
 	alias sed="gsed"
 	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 12.app"
+	alias ls='ls -G'
 fi
 
 
 alias grep="grep --color -n --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
-alias ls='ls -G'
 alias mgrep="grep -v grep | grep"
 alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
