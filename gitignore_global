@@ -1,0 +1,6 @@
+*~
+.DS_Store
+/Users/sivakom/palm/server/current/PalmWebServices/PalmWebServicesIntWebApp/src/main/webapp/console/config/engineering/us/engineering/css/
+*.pyc
+.idea/
+*.iml
