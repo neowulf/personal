@@ -8,9 +8,9 @@
 
 [user]
 	name = siva kommuri
-	email = snv.kommuri@gmail.com
+	email = siva@kommuri.com
 [core]
-	excludesfile = /Users/sivakom/.gitignore_global
+	excludesfile = "!echo ${HOME}"/.gitignore_global
 	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

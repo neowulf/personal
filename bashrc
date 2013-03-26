@@ -16,7 +16,13 @@ export LC_CTYPE=C
 ## FUNCTIONS
 ###############################
 
-function videa() { idea `pwd`/$1 }
+function videa() { 
+	if [[ $platform == 'linux' ]]; then
+		idea `pwd`/$1 
+	elif [[ $platform == 'macosx' ]]; then
+		/Applications/IntelliJ\ IDEA\ 12.app/Contents/MacOS/idea `pwd`/${1}
+	fi
+}
 
 function parse_git_branch_and_add_brackets { 
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/' 
@@ -45,10 +51,6 @@ function od {
 function restartvpn {
   sudo launchctl stop com.apple.racoon
   sudo launchctl start com.apple.racoon
-}
-
-function videa {
-  /Applications/IntelliJ\ IDEA\ 12.app/Contents/MacOS/idea `pwd`/${1}
 }
 
 ###############################
