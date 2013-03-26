@@ -34,6 +34,10 @@ function restartvpn {
   sudo launchctl start com.apple.racoon
 }
 
+function videa {
+  /Applications/IntelliJ\ IDEA\ 12.app/Contents/MacOS/idea `pwd`/${1}
+}
+
 ###############################
 ## PROMPT
 ###############################

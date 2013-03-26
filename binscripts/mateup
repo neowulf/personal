@@ -17,5 +17,10 @@ cd ../json.tmbundle
 hg pull
 echo "--Textmate json bundle updated..."
 
+# git clone git://github.com/alkemist/Confluence.tmbundle.git
+cd ../Confluence.tmbundle
+git pull origin master
+echo "--Textmate Confluence bundle updated..."
+
 popd
 osascript -e 'tell app "TextMate" to reload bundles'
