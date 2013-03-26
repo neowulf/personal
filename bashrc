@@ -1,5 +1,13 @@
 #!/bin/sh
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='macosx'
+fi
+
 export LC_CTYPE=C
 
 #[ -z "$PS1" ] && return
@@ -7,7 +15,8 @@ export LC_CTYPE=C
 ###############################
 ## FUNCTIONS
 ###############################
-#function videa() { idea `pwd`/$1 }
+
+function videa() { idea `pwd`/$1 }
 
 function parse_git_branch_and_add_brackets { 
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/' 
@@ -26,7 +35,11 @@ function killtcs {
 }
 
 function od { 
-  opendiff $1 .svn/text-base/$1.svn-base; 
+	if [[ $platform == 'linux' ]]; then
+	  diff $1 .svn/text-base/$1.svn-base; 
+	elif [[ $platform == 'macosx' ]]; then
+	  opendiff $1 .svn/text-base/$1.svn-base; 
+	fi
 }
 
 function restartvpn {
@@ -86,31 +99,45 @@ fi
 ###############################
 ## ENV VARIABLES
 ###############################
-#export EDITOR="vim"
-export EDITOR='mate -w'
-export SVN_EDITOR="vim"
-#export JDK_HOME="/usr/lib/jvm/java-6-sun"
-#export JAVA_HOME="/usr/lib/jvm/java-6-sun"
-export JAVA_HOME="/Library/Java/Home"
-export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
-# export GIT_EDITOR="mate2 --name 'Git Commit Message' -w -l 1"
-export GIT_EDITOR="mate -w -l 1"
+
+if [[ $platform == 'linux' ]]; then
+	export EDITOR="vim"
+	export SVN_EDITOR="vim"
+	export JDK_HOME="/usr/lib/jvm/java-6-sun"
+	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+elif [[ $platform == 'macosx' ]]; then
+	export EDITOR='mate -w'
+	export JAVA_HOME="/Library/Java/Home"
+	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
+	export GIT_EDITOR="mate -w -l 1"
+	export PATH="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine:${PATH}"
+fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine:/usr/local/bin:/usr/local/binscripts:/usr/local/binscripts/git-aliae-bin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/binscripts:/usr/local/binscripts/git-aliae-bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
 ###############################
-alias browse='nautilus'
+
+if [[ $platform == 'linux' ]]; then
+	export EDITOR="vim"
+	export SVN_EDITOR="vim"
+	export JDK_HOME="/usr/lib/jvm/java-6-sun"
+	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+elif [[ $platform == 'macosx' ]]; then
+	# gsed is a sed from cellar
+	alias sed="gsed"
+	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 12.app"
+fi
+
+
 alias grep="grep --color -n --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
 alias ls='ls -G'
 alias mgrep="grep -v grep | grep"
 alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
-# gsed is a sed from cellar
-alias sed="gsed"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
 alias vi="vim"
@@ -120,5 +147,3 @@ alias sc="enclock  && gnome-screensaver-command --lock"
 alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
-
-alias "ij=open -a /Applications/IntelliJ\ IDEA\ 12.app"
