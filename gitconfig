@@ -10,7 +10,7 @@
 	name = siva kommuri
 	email = siva@kommuri.com
 [core]
-	excludesfile = "!echo ${HOME}"/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -23,6 +23,7 @@
 	upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
 	## http://www.jukie.net/bart/blog/pimping-out-git-log
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+	di = diff --color 
 	
 	branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
 	cd-root = rev-parse --show-cdup

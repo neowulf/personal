@@ -147,3 +147,45 @@ alias sc="enclock  && gnome-screensaver-command --lock"
 alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
+
+###############################
+## Quick Naviation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+###############################
+
+export MARKPATH=$HOME/.marks
+function jump { 
+    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark { 
+    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark { 
+    rm -i "$MARKPATH/$1"
+}
+function marks {
+    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+_completemarks() {
+  local curw=${COMP_WORDS[COMP_CWORD]}
+  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+  COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
+  return 0
+}
+
+complete -F _completemarks jump unmark
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/siva/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/home/siva/.gvm/bin/gvm-init.sh"
+
+if [ -f "$HOME/palm/user_rep/skommuri/scripts/palmbashrc" ]; then
+   . $HOME/palm/user_rep/skommuri/scripts/palmbashrc
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+[[ -s /home/siva/.nvm/nvm.sh ]] && . /home/siva/.nvm/nvm.sh # This loads NVM
+
+[[ -s /home/siva/.evm/scripts/evm ]] && source /home/siva/.evm/scripts/evm
