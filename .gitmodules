@@ -1,0 +1,3 @@
+[submodule "binscripts/git-aliae"]
+	path = binscripts/git-aliae
+	url = https://github.com/ConradIrwin/git-aliae
