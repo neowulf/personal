@@ -1,12 +1,4 @@
-#!/bin/sh
-
-platform='unknown'
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
-   platform='linux'
-elif [[ "$unamestr" == 'Darwin' ]]; then
-   platform='macosx'
-fi
+#!/bin/bash
 
 export LC_CTYPE=C
 
@@ -117,7 +109,7 @@ elif [[ $platform == 'macosx' ]]; then
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:/usr/local/binscripts:/usr/local/binscripts/git-aliae-bin:${PATH}"
+export PATH="/usr/local/bin:$(pwd)/binscripts:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -176,16 +168,3 @@ complete -F _completemarks jump unmark
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/siva/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/home/siva/.gvm/bin/gvm-init.sh"
-
-if [ -f "$HOME/palm/user_rep/skommuri/scripts/palmbashrc" ]; then
-   . $HOME/palm/user_rep/skommuri/scripts/palmbashrc
-fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-
-[[ -s /home/siva/.nvm/nvm.sh ]] && . /home/siva/.nvm/nvm.sh # This loads NVM
-
-[[ -s /home/siva/.evm/scripts/evm ]] && source /home/siva/.evm/scripts/evm

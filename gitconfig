@@ -12,6 +12,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
+[diff]
+	#external = git-meld
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -46,3 +48,9 @@
 	ff-mirror = merge --ff-only refs/remotes/mirror/`git branch-name`
 [rerere]
 	enabled = 1
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 700x550+2818+594
+	history-view-vpane-position = 506
+	main-window-view = HistoryView
+	file-view-vpane-position = 496
