@@ -102,14 +102,14 @@ if [[ $platform == 'linux' ]]; then
 	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 elif [[ $platform == 'macosx' ]]; then
 	export EDITOR='mate -w'
-	export JAVA_HOME="/Library/Java/Home"
+	export JAVA_HOME=$(/usr/libexec/java_home)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
-	export PATH="/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine:${PATH}"
+	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:$(pwd)/binscripts:${PATH}"
+export PATH="/usr/local/bin:$(pwd)/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -124,7 +124,6 @@ elif [[ $platform == 'macosx' ]]; then
 	alias ls='ls -G'
 fi
 
-
 alias grep="grep --color -n --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
 alias mgrep="grep -v grep | grep"
@@ -134,9 +133,9 @@ alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
 alias vi="vim"
 
-alias enclock="fusermount -u ~/.passwords"
-alias sc="enclock  && gnome-screensaver-command --lock"
-alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
+# alias enclock="fusermount -u ~/.passwords"
+# alias sc="enclock  && gnome-screensaver-command --lock"
+# alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
 
@@ -165,6 +164,3 @@ _completemarks() {
 }
 
 complete -F _completemarks jump unmark
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-

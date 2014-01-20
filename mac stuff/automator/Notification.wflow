@@ -1,7 +1,0 @@
-on notify(title, subtitle, message)
-	if title as text is not "" then set title to " -D title=" & quoted form of (title as text)
-	if subtitle as text is not "" then set subtitle to " -D subtitle=" & quoted form of (subtitle as text)
-	if message as text is not "" then set message to " -D message=" & quoted form of (message as text)
-	
-	do shell script "automator" & title & subtitle & message & " ~/Library/Workflows/Display Notification.wflow"
-end notify
