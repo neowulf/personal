@@ -13,7 +13,7 @@ function videa() {
 	if [[ $platform == 'linux' ]]; then
 		idea `pwd`/$1 
 	elif [[ $platform == 'macosx' ]]; then
-		/Applications/IntelliJ\ IDEA\ 12.app/Contents/MacOS/idea `pwd`/${1}
+		/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea `pwd`/${1}
 	fi
 }
 
@@ -110,7 +110,7 @@ elif [[ $platform == 'macosx' ]]; then
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:~/.personal/bin:${PATH}"
+export PATH="/usr/local/bin:~/.personal/mac_os_x/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -121,7 +121,7 @@ if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'macosx' ]]; then
 	# gsed is a sed from cellar
 	alias sed="gsed"
-	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 12.app"
+	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 13.app"
 	alias ls='ls -G'
 fi
 
