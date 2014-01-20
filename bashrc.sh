@@ -3,6 +3,7 @@
 export LC_CTYPE=C
 
 #[ -z "$PS1" ] && return
+platform=${platform:-macosx}
 
 ###############################
 ## FUNCTIONS
@@ -109,7 +110,7 @@ elif [[ $platform == 'macosx' ]]; then
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:$(pwd)/bin:${PATH}"
+export PATH="/usr/local/bin:~/.personal/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
