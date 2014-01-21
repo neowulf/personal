@@ -20,3 +20,6 @@ fi
 # install workflows
 sudo rm -rf ~/Library/Services
 ln -vs "${ANCHOR}/mac_os_x/workflow" ~/Library/Services
+
+# install git submodules
+git submodule foreach git pull
