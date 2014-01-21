@@ -1,3 +1,6 @@
 [submodule "binscripts/git-aliae"]
 	path = binscripts/git-aliae
 	url = https://github.com/ConradIrwin/git-aliae
+[submodule "submodule/todo.txt-cli"]
+	path = submodule/todo.txt-cli
+	url = https://github.com/ginatrapani/todo.txt-cli.git
