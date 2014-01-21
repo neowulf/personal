@@ -110,7 +110,7 @@ elif [[ $platform == 'macosx' ]]; then
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:~/.personal/mac_os_x/bin:${PATH}"
+export PATH="/usr/local/bin:~/.personal/mac_os_x/bin:~/.personal/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -132,6 +132,7 @@ alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
+alias todo="todo.sh -d ~/.personal/submodule/todo/todo.cfg"
 alias vi="vim"
 
 # alias enclock="fusermount -u ~/.passwords"
