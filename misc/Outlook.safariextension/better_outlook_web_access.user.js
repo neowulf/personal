@@ -5,12 +5,33 @@
 // @include        */owa/*
 // ==/UserScript==
 
-function GM_log(statement) {
-	console.log(statement);
+function isSafari() {
+  var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+  return is_safari;
 }
 
-function GM_xmlhttpRequest(request) {
-	new XMLHttpRequest(request);
+if (isSafari) {
+	
+	function GM_log(statement) {
+		console.log(statement);
+	}
+
+	function GM_xmlhttpRequest(request) {
+	
+		var req;
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+		  	req=new XMLHttpRequest();
+		} else {
+			// code for IE6, IE5
+		  	req=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		req.onload = request.onload;
+		req.open(request.method, request.url, false);
+		req.send();
+	}
+
+	GM_log("detected safari...");
 }
 
 GM_log("Starting Better OWA");
@@ -140,7 +161,8 @@ var list_previewMessageInterval = null;
 var list_previewBox = null;
 
 function previewMessage(messageLink, oldURL) {
-  if (oldURL == messageLink.href) {
+  GM_log("generating previews: " + messageLink + " " + oldURL);
+  if (oldURL === messageLink.href) {
     return false;
   }
   clearInterval(list_previewMessageInterval);
@@ -148,7 +170,7 @@ function previewMessage(messageLink, oldURL) {
     method: 'GET',
     url: messageLink.href,
     onload: function(responseDetails) {
-      var text = responseDetails.responseText;
+      var text = responseDetails.responseText || this.responseText;
       var tempBox = document.createElement("div");
       tempBox.innerHTML = text;
       var content = findCaptionTableIn("w100", "Content Area", tempBox);
@@ -162,12 +184,13 @@ function previewMessage(messageLink, oldURL) {
 }
 
 function refreshInbox() {
+  GM_log("refreshing inbox");
   clearInterval(list_previewMessageInterval);
   GM_xmlhttpRequest({
     method: 'GET',
     url: window.location.href,
     onload: function(responseDetails) {
-      var text = responseDetails.responseText;
+      var text = responseDetails.responseText || this.responseText;
       var tempBox = document.createElement("div");
       tempBox.innerHTML = text;
       var list = findInbox(tempBox);
