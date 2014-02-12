@@ -17,6 +17,12 @@ else
 	rm ~/.bashrc_temp
 fi
 
+# install inputrc
+rm -f ~/.inputrc && ln -vs ${ANCHOR}/inputrc ~/.inputrc
+
+# install vim folder
+rm -f ~/.vim && ln -vs ${ANCHOR}/vim ~/.vim
+
 # install workflows
 sudo rm -rf ~/Library/Services
 ln -vs "${ANCHOR}/mac_os_x/workflow" ~/Library/Services

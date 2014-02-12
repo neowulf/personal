@@ -78,11 +78,11 @@ export LESS="-R"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
+# ${HOME}/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ${HOME}/.bash_aliases ]; then
+    . ${HOME}/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -92,25 +92,27 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# todo auto completion
+source ${HOME}/.personal/submodule/todo/todo_completion
+
 ###############################
 ## ENV VARIABLES
 ###############################
 
 if [[ $platform == 'linux' ]]; then
-	export EDITOR="vim"
-	export SVN_EDITOR="vim"
-	export JDK_HOME="/usr/lib/jvm/java-6-sun"
+	export EDITOR="vi"
+	export SVN_EDITOR="vi"
 	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 elif [[ $platform == 'macosx' ]]; then
 	export EDITOR='mate -w'
-	export JAVA_HOME=$(/usr/libexec/java_home)
+	export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:~/.personal/mac_os_x/bin:~/.personal/bin:${PATH}"
+export PATH="${M2_HOME}:${JAVA_HOME}:/usr/local/bin:${HOME}/.personal/mac_os_x/bin:${HOME}/.personal/bin:${PATH}"
 
 ###############################
 ## COMMON UTILITIES
@@ -120,7 +122,7 @@ if [[ $platform == 'linux' ]]; then
 	alias ls='ls --color=auto'
 elif [[ $platform == 'macosx' ]]; then
 	# gsed is a sed from cellar
-	alias sed="gsed"
+	# alias sed="gsed"
 	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 13.app"
 	alias ls='ls -G'
 fi
@@ -132,12 +134,12 @@ alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
-alias todo="todo.sh -d ~/.personal/submodule/todo/todo.cfg"
-alias vi="vim"
+alias t="todo -d ${HOME}/.personal/submodule/todo/todo.cfg"
+alias vi="vim -u ${HOME}/.personal/vim/vimrc"
 
-# alias enclock="fusermount -u ~/.passwords"
+# alias enclock="fusermount -u ${HOME}/.passwords"
 # alias sc="enclock  && gnome-screensaver-command --lock"
-# alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ~/.passwords.encrypted ~/.passwords"
+# alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ${HOME}/.passwords.encrypted ${HOME}/.passwords"
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
 
@@ -160,7 +162,11 @@ function marks {
 }
 _completemarks() {
   local curw=${COMP_WORDS[COMP_CWORD]}
-  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+  if [[ $platform == 'linux' ]]; then
+	  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+  elif [[ $platform == 'macosx' ]]; then
+	  local wordlist=$(find $MARKPATH -type l -print0 | xargs -0 | \sed 's/\/Users\/siva\/.marks\///g')
+  fi
   COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
   return 0
 }
