@@ -17,6 +17,9 @@ else
 	rm ~/.bashrc_temp
 fi
 
+# install sbtconfig
+rm -f ~/.sbtconfig && ln -vs ${ANCHOR}/sbtconfig ~/.sbtconfig
+
 # install inputrc
 rm -f ~/.inputrc && ln -vs ${ANCHOR}/inputrc ~/.inputrc
 

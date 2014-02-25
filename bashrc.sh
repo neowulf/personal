@@ -13,7 +13,7 @@ function videa() {
 	if [[ $platform == 'linux' ]]; then
 		idea `pwd`/$1 
 	elif [[ $platform == 'macosx' ]]; then
-		/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea `pwd`/${1}
+		${HOME}/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea `pwd`/${1}
 	fi
 }
 
