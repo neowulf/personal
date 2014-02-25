@@ -1,0 +1,21 @@
+
+# Args are: file body.size area title.size
+# Not all args need to be given, but they must be in position, i.e.,
+# if title.size is to be specified, all other args must be given also.
+
+echo "Proc Page:
+
+Proc Nicetab:
+File:	\$2
+Body.size:	\$3
+Area:	\$4
+Title.size:	\$5
+" > /usr/tmp/nicetab$$
+
+if [ $# -eq 0 ]; then pipl /usr/tmp/nicetab$$ - 10 nicetab 11
+elif [ $# -eq 1 ]; then pipl /usr/tmp/nicetab$$ $1 10 nicetab 11
+elif [ $# -eq 2 ]; then pipl /usr/tmp/nicetab$$ $1 $2 nicetab 11
+elif [ $# -eq 3 ]; then pipl /usr/tmp/nicetab$$ $1 $2 $3 11
+elif [ $# -eq 4 ]; then pipl /usr/tmp/nicetab$$ $1 $2 $3 $4
+fi
+rm /usr/tmp/nicetab$$
