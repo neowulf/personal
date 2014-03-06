@@ -59,4 +59,4 @@ while getopts "t:s:m:" opt; do
 	esac
 done
 
-notify $title $subtitle $message
+notify "$title" "$subtitle" "$message"

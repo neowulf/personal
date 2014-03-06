@@ -104,7 +104,8 @@ if [[ $platform == 'linux' ]]; then
 	export SVN_EDITOR="vi"
 	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 elif [[ $platform == 'macosx' ]]; then
-	export EDITOR='mate -w'
+	#export EDITOR='mate -w'
+	export EDITOR='vi'
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
