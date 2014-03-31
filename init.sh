@@ -32,3 +32,15 @@ ln -vs "${ANCHOR}/mac_os_x/workflow" ~/Library/Services
 
 # install git submodules
 git submodule foreach git pull
+
+# http://dbknickerbocker.blogspot.com/2013/04/simple-fix-to-missing-toolsjar-in-jdk.html
+# Cobertura could not find tools.jar on Mac OS X
+if [[ $platform == 'macosx' ]]; then
+	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/classes.jar /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/tools.jar
+	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/lib
+	sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport
+fi
+
+# install textmate properties
+ln -vs ~/.personal/mac_os_x/textmate/tm_properties ~/.tm_properties
+ln -s ~/.personal/mac_os_x/textmate/tm_properties ~/.tm_properties
