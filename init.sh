@@ -4,10 +4,7 @@ ANCHOR="${HOME}/.personal"
 
 # ln -fs ${ANCHOR} `pwd` 
 
-rm -f ~/.gitconfig && ln -vs ${ANCHOR}/git/gitconfig ~/.gitconfig
-rm -f ~/.gitignore_global && ln -vs ${ANCHOR}/git/gitignore_global ~/.gitignore_global
-
-if grep -q ${ANCHOR} ~/.bashrc ; then 
+if grep -q ${ANCHOR} ~/.bashrc ; then
 	echo 'bashrc already installed'; 
 else
 	echo "installing bashrc" 
@@ -17,14 +14,10 @@ else
 	rm ~/.bashrc_temp
 fi
 
-# install sbtconfig
-rm -f ~/.sbtconfig && ln -vs ${ANCHOR}/sbtconfig ~/.sbtconfig
-
-# install inputrc
-rm -f ~/.inputrc && ln -vs ${ANCHOR}/inputrc ~/.inputrc
-
-# install vim folder
-rm -f ~/.vim && ln -vs ${ANCHOR}/vim ~/.vim
+# Install the configs directory
+for i in ${ANCHOR}/configs/* ; do
+    ln -vs -f $i ~/.$(echo ${i} | cut -d '/' -f 6);
+done
 
 # install workflows
 sudo rm -rf ~/Library/Services
@@ -40,7 +33,3 @@ if [[ $platform == 'macosx' ]]; then
 	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/lib
 	sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport
 fi
-
-# install textmate properties
-ln -vs ~/.personal/mac_os_x/textmate/tm_properties ~/.tm_properties
-ln -s ~/.personal/mac_os_x/textmate/tm_properties ~/.tm_properties

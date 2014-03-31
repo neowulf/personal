@@ -93,7 +93,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # todo auto completion
-source ${HOME}/.personal/submodule/todo/todo_completion
+source ${HOME}/.personal/misc/todo/todo_completion
 
 ###############################
 ## ENV VARIABLES
@@ -145,7 +145,7 @@ alias vi="vim -u ${HOME}/.personal/vim/vimrc"
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
 
 ###############################
-## Quick Naviation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+## Quick Navigation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 ###############################
 
 export MARKPATH=$HOME/.marks
