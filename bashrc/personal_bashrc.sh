@@ -2,7 +2,6 @@
 
 export LC_CTYPE=C
 
-PLATFORM=${PLATFORM:-macosx}
 CUR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
