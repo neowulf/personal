@@ -24,7 +24,7 @@ alias pp="lsof -i -P"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
 alias t="${PERSONAL_DIR}/misc/todo/todo.sh -d ${PERSONAL_DIR}/misc/todo/todo.cfg"
-alias vi="vim -u .vim/vimrc"
+alias vi="vim -u ${PERSONAL_DIR}/configs/vim/vimrc"
 
 # alias enclock="fusermount -u ${HOME}/.passwords"
 # alias sc="enclock  && gnome-screensaver-command --lock"
