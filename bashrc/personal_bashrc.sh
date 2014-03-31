@@ -2,49 +2,15 @@
 
 export LC_CTYPE=C
 
-#[ -z "$PS1" ] && return
-platform=${platform:-macosx}
+PLATFORM=${PLATFORM:-macosx}
+CUR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
-###############################
-## FUNCTIONS
-###############################
+. ${CUR_DIR}/bash_aliases.sh
 
-function videa() { 
-	if [[ $platform == 'linux' ]]; then
-		idea `pwd`/$1 
-	elif [[ $platform == 'macosx' ]]; then
-		${HOME}/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea `pwd`/${1}
-	fi
-}
+. ${CUR_DIR}/functions.sh
 
-function parse_git_branch_and_add_brackets { 
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/' 
-}
-
-function date_txt { 
-  date +%H%M.%S 
-}
-
-function memcache_flush_all { 
-  echo "flush_all" | nc localhost 11211 
-}
-
-function killtcs {
-  ps -ef | \grep Bootstrap | \grep -v 'grep' | awk '{print $2}' | xargs kill -9
-}
-
-function od { 
-	if [[ $platform == 'linux' ]]; then
-	  diff $1 .svn/text-base/$1.svn-base; 
-	elif [[ $platform == 'macosx' ]]; then
-	  opendiff $1 .svn/text-base/$1.svn-base; 
-	fi
-}
-
-function restartvpn {
-  sudo launchctl stop com.apple.racoon
-  sudo launchctl start com.apple.racoon
-}
+source ${CUR_DIR}/../misc/todo/todo_completion
 
 ###############################
 ## PROMPT
@@ -68,108 +34,31 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# Add "shopt -s checkwinsize" to your .bashrc to make sure terminals wrap lines correctly after resizing them.
+# check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 export LESS="-R"
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ${HOME}/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ${HOME}/.bash_aliases ]; then
-    . ${HOME}/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-# todo auto completion
-source ${HOME}/.personal/misc/todo/todo_completion
+[ -x lesspipe.sh ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 ###############################
 ## ENV VARIABLES
 ###############################
 
-if [[ $platform == 'linux' ]]; then
-	export EDITOR="vi"
-	export SVN_EDITOR="vi"
-	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
-elif [[ $platform == 'macosx' ]]; then
+if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
 	export EDITOR='vi'
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
+    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x/:${PATH}"
+else
+    export EDITOR="vi"
+	export SVN_EDITOR="vi"
+	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
-export PATH="${M2_HOME}:${JAVA_HOME}:/usr/local/bin:${HOME}/.personal/mac_os_x/bin:${HOME}/.personal/bin:${PATH}"
-
-###############################
-## COMMON UTILITIES
-###############################
-
-if [[ $platform == 'linux' ]]; then
-	alias ls='ls --color=auto'
-elif [[ $platform == 'macosx' ]]; then
-	# gsed is a sed from cellar
-	# alias sed="gsed"
-	alias "ij=open -a /Applications/IntelliJ\ IDEA\ 13.app"
-	alias ls='ls -G'
-fi
-
-alias grep="grep --color -n --exclude=\*.svn\*"
-#alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
-alias mgrep="grep -v grep | grep"
-alias pj="python -mjson.tool"
-alias pp="lsof -i -P"
-alias sortdirs="du -k * | sort -n -r | head -n 20"
-alias sumdirs="du -k -s * | sort -k1 -g -r"
-alias t="todo -d ${HOME}/.personal/submodule/todo/todo.cfg"
-alias vi="vim -u ${HOME}/.personal/vim/vimrc"
-
-# alias enclock="fusermount -u ${HOME}/.passwords"
-# alias sc="enclock  && gnome-screensaver-command --lock"
-# alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ${HOME}/.passwords.encrypted ${HOME}/.passwords"
-# function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
-# function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
-
-###############################
-## Quick Navigation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
-###############################
-
-export MARKPATH=$HOME/.marks
-function jump { 
-    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
-}
-function mark { 
-    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
-}
-function unmark { 
-    rm -i "$MARKPATH/$1"
-}
-function marks {
-    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
-}
-_completemarks() {
-  local curw=${COMP_WORDS[COMP_CWORD]}
-  if [[ $platform == 'linux' ]]; then
-	  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
-  elif [[ $platform == 'macosx' ]]; then
-	  local wordlist=$(find $MARKPATH -type l -print0 | xargs -0 | \sed 's/\/Users\/siva\/.marks\///g')
-  fi
-  COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
-  return 0
-}
-
-complete -F _completemarks jump unmark
+export PATH="${JAVA_HOME}:${PERSONAL_DIR}/bin:${PATH}"

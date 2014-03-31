@@ -3,9 +3,11 @@
 # http://macosxautomation.com/mavericks/notifications/01.html
 # https://developer.apple.com/library/mac/documentation/applescript/conceptual/applescriptlangguide/reference/aslr_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW224
 
-# A simple bash script that uses Applescript to
-# display alerts. 
+# A simple bash script that uses Applescript to display alerts.
 # 	alert "Title" "Subtitle" "Message"
+# Sample usage:
+#   personal/bin/mac_os_x/alert.sh -t "Drink Water"
+
 
 function help_text () {
 	echo "Uses AppleScript to display alerts."
@@ -17,16 +19,16 @@ function alert() {
 	title=$1
 	subtitle=$2
 	message=$3
-	
+
 	osascript -e "display alert \"${title}\""
 }
 
 function notify () {
-	
+
 	title=$1
 	subtitle=$2
 	message=$3
-	
+
 	osascript -e "display \
 		notification \"${message}\" with \
 		title \"${title}\" \
