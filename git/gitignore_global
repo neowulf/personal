@@ -1,8 +1,0 @@
-*~
-.DS_Store
-*.pyc
-
-.idea
-.idea/
-*.iml
-atlassian-ide-plugin.xml
