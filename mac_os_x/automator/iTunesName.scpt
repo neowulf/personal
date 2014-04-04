@@ -1,3 +1,5 @@
+#!/usr/bin/osascript
+
 -- http://www.macosxhints.com/article.php?story=2004070301135736
 (*
 
