@@ -52,7 +52,7 @@ if [ $(uname) == "Darwin" ]; then
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
-    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x/:${PATH}"
+    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PATH}"
 else
     export EDITOR="vi"
 	export SVN_EDITOR="vi"

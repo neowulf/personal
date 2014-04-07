@@ -1,3 +1,9 @@
 # https://gist.github.com/dvessel/1478685
+# https://github.com/textmate/textmate/wiki/FAQ
+# http://wiki.macromates.com/Reference/Settings
 
 exclude = "{target}"
+
+softWrap = true  
+tabSize = 4  
+softTabs = true
