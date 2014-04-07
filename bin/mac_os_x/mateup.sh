@@ -20,10 +20,17 @@ echo
 #popd
 
 # git clone git://github.com/alkemist/Confluence.tmbundle.git
-pushd Confluence.tmbundle
+pushd Confluence.tmbundle > /dev/null
 git pull origin master
 echo "--Textmate Confluence bundle updated..."
-popd
+popd > /dev/null
+
+# 
+# git clone git://github.com/l15n/fish-tmbundle.git "fish.tmbundle"
+pushd fish.tmbundle > /dev/null
+git pull origin master
+echo "--Textmate Fish bundle updated..."
+popd > /dev/null
 
 popd
 #osascript -e 'tell app "TextMate" to reload bundles'
