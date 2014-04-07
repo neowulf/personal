@@ -3,8 +3,7 @@
 # http://www.ithug.com/2008/12/applescript-arranging-multiple-windows/
 # http://macmembrane.com/resize-any-window-quickly-and-exactly-with-applescript-and-fastscripts/
 
-# tell application "Google Chrome"
-tell application "Mail"
+tell application "Google Chrome"
 	activate
 	set _theWindows to every window
 	repeat with i from 1 to number of items in _theWindows
