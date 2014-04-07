@@ -33,3 +33,6 @@ if [[ $platform == 'macosx' ]]; then
 	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/lib
 	sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport
 fi
+
+~/.config> ln -s ~/.personal/shell/fish .
+ln -vs "${ANCHOR}/shell/fish ~/.config/fish"
