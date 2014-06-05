@@ -32,5 +32,12 @@ git pull origin master
 echo "--Textmate Fish bundle updated..."
 popd > /dev/null
 
+#
+# git clone https://github.com/miksago/jade-tmbundle Jade.tmbundle
+pushd Jade.tmbundle > /dev/null
+git pull origin master
+echo "--Textmate Jade bundle updated..."
+popd > /dev/null
+
 popd
 #osascript -e 'tell app "TextMate" to reload bundles'
