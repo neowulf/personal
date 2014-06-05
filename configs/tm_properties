@@ -2,7 +2,8 @@
 # https://github.com/textmate/textmate/wiki/FAQ
 # http://wiki.macromates.com/Reference/Settings
 
-exclude = "{target}"
+# /Applications/TextMate.app/Contents/Resources/Default.tmProperties
+exclude = "{$exclude,target}"
 
 softWrap = true  
 tabSize = 4  
