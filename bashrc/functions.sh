@@ -44,6 +44,11 @@ function restartvpn {
     sudo launchctl start com.apple.racoon
 }
 
+# Allows for iterm title to be updated - http://superuser.com/a/599156/261889
+function iterm_title {
+    echo -ne "\033]0;"$*"\007"
+}
+
 ###############################
 ## Quick Navigation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 ###############################
