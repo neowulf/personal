@@ -1,7 +1,6 @@
-[submodule "misc/todo"]
-	path = misc/todo
-	url = https://github.com/ginatrapani/todo.txt-cli
-
 [submodule "bin/git/git-aliae"]
 	path = bin/git/git-aliae
 	url = https://github.com/ConradIrwin/git-aliae
+[submodule "misc/todo.txt-cli"]
+	path = misc/todo.txt-cli
+	url = https://github.com/ginatrapani/todo.txt-cli
