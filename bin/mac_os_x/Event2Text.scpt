@@ -10,7 +10,7 @@ set the end_day to (the start_day + (7 * days) - 1)
 set all_events to {}
 set what_cal to {}
 -- I only use some of my calendars for this
-set ok_cals to {"SKHome", "SJSU"}
+set ok_cals to {"SKHome"}
 -- this is the text file (the directory syncs to my iPod as well)
 set events_file to alias "/Users/sivakom/Documents/todo/ical/events.txt"
 try
