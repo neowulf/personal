@@ -9,7 +9,7 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/functions.sh
 
-source ${CUR_DIR}/../misc/todo/todo_completion
+source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
 
 ###############################
 ## PROMPT
