@@ -23,7 +23,7 @@ alias pj="python -mjson.tool"
 alias pp="lsof -i -P"
 alias sortdirs="du -k * | sort -n -r | head -n 20"
 alias sumdirs="du -k -s * | sort -k1 -g -r"
-alias t="${PERSONAL_DIR}/misc/todo/todo.sh -d ${PERSONAL_DIR}/misc/todo/todo.cfg"
+alias t="${PERSONAL_DIR}/misc/todo/todo.sh -d ${PERSONAL_DIR}/sub_directory_configs/todo/todo.cfg"
 alias vi="vim -u ${PERSONAL_DIR}/configs/vim/vimrc"
 
 # alias enclock="fusermount -u ${HOME}/.passwords"
