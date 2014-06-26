@@ -37,7 +37,7 @@ then
         TRACKING_BRANCH=`git config --get svn-remote.svn.fetch | sed -e 's/.*:refs\/remotes\///'`
 fi
 
-TRACKING_BRANCH="mirror/${TRACKING_BRANCH}"
+#TRACKING_BRANCH="mirror/${TRACKING_BRANCH}"
 echo "Tracking branch: ${TRACKING_BRANCH}"
 
 # Get the highest revision number
