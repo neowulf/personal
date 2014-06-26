@@ -49,6 +49,10 @@ function iterm_title {
     echo -ne "\033]0;"$*"\007"
 }
 
+function mm {
+    \grep Service ~/.ssh/magicmirror_formatted.json | \grep --colour $1
+}
+
 ###############################
 ## Quick Navigation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 ###############################

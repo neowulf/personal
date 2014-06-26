@@ -9,6 +9,8 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/functions.sh
 
+. ${CUR_DIR}/docker.sh
+
 source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
 
 ###############################
@@ -47,12 +49,12 @@ export LESS="-R"
 
 if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
-	export EDITOR='vi'
+	export EDITOR='vim'
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
-    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PATH}"
+    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PERSONAL_DIR}/bin/git:${PATH}"
 else
     export EDITOR="vi"
 	export SVN_EDITOR="vi"
