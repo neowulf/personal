@@ -1,6 +1,3 @@
--- Hi!
--- Save this as ~/.hydra/init.lua and choose Reload Config from the menu
-
 hydra.alert("Hydra home config loaded", 1.5)
 
 -- save the time when updates are checked
@@ -25,11 +22,15 @@ menu.show(function()
 end)
 
 -- move the window to the right half of the screen
-function movewindow_righthalf()
+function movewindow(dir)
   local win = window.focusedwindow()
   local newframe = win:screen():frame_without_dock_or_menu()
-  newframe.w = newframe.w / 2
-  newframe.x = newframe.w -- comment this line to push it to left half of screen
+  if dir == "right" then      
+      newframe.w = newframe.w / 2
+      newframe.x = newframe.w 
+  elseif dir == "left" then
+      newframe.w = newframe.w / 2
+  end
   win:setframe(newframe)
 end
 
@@ -46,9 +47,6 @@ function updates.available(available)
     hydra.alert("No update available.")
   end
 end
-
--- Uncomment this if you want Hydra to make sure it launches at login
--- autolaunch.set(true)
 
 -- check for updates every week
 timer.new(timer.weeks(1), checkforupdates):start()
@@ -91,7 +89,8 @@ hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east()
 hotkey.bind(mashshift, 'K', function() window.focusedwindow():focuswindow_north() end)
 hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south() end)
 
-hotkey.new(mash, "L", movewindow_righthalf):enable()
+hotkey.new(mash, "H", movewindow("left")):enable()
+hotkey.new(mash, "L", movewindow("right")):enable()
 
 -- hotkey.bind(mash, 'M', ext.grid.maximize_window)
 -- 
