@@ -89,8 +89,8 @@ hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east()
 hotkey.bind(mashshift, 'K', function() window.focusedwindow():focuswindow_north() end)
 hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south() end)
 
-hotkey.new(mash, "H", movewindow("left")):enable()
-hotkey.new(mash, "L", movewindow("right")):enable()
+hotkey.bind(mash, "H", function() movewindow("left") end)
+hotkey.bind(mash, "L", function() movewindow("right") end)
 
 -- hotkey.bind(mash, 'M', ext.grid.maximize_window)
 -- 
