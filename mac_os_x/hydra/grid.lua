@@ -1,3 +1,5 @@
+-- Source: https://github.com/sdegutis/dotfiles/tree/osx/home/.hydra/grid.lua
+
 ext.grid = {}
 
 ext.grid.MARGINX = 5

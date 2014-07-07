@@ -1,3 +1,5 @@
+-- Source: https://github.com/sdegutis/dotfiles/tree/osx/home/.hydra
+
 require "grid"
 
 hydra.alert("Hydra home config loaded", 1.5)
@@ -96,10 +98,10 @@ hotkey.bind(mash, '-', function() ext.grid.adjustwidth(-1) end)
 -- hotkey.bind(mash, "H", function() movewindow("left") end)
 -- hotkey.bind(mash, "L", function() movewindow("right") end)
 -- 
--- hotkey.bind(mashshift, 'H', function() window.focusedwindow():focuswindow_west() end)
--- hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east() end)
--- hotkey.bind(mashshift, 'K', function() window.focusedwindow():focuswindow_north() end)
--- hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south() end)
+hotkey.bind(mashshift, 'H', function() window.focusedwindow():focuswindow_west() end)
+hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east() end)
+hotkey.bind(mashshift, 'K', function() window.focusedwindow():focuswindow_north() end)
+hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south() end)
 -- 
 hotkey.bind(mash, 'M', ext.grid.maximize_window)
 -- 
