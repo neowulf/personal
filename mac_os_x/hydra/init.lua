@@ -25,7 +25,12 @@ end)
 function movewindow(dir)
   local win = window.focusedwindow()
   local newframe = win:screen():frame_without_dock_or_menu()
-  if dir == "right" then      
+  if dir == "down" then      
+      newframe.h = newframe.h / 2
+      newframe.y = newframe.h
+  elseif dir == "up" then      
+      newframe.h = newframe.h / 2
+  elseif dir == "right" then      
       newframe.w = newframe.w / 2
       newframe.x = newframe.w 
   elseif dir == "left" then
@@ -89,6 +94,8 @@ hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east()
 hotkey.bind(mashshift, 'K', function() window.focusedwindow():focuswindow_north() end)
 hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south() end)
 
+hotkey.bind(mash, "J", function() movewindow("down") end)
+hotkey.bind(mash, "K", function() movewindow("up") end)
 hotkey.bind(mash, "H", function() movewindow("left") end)
 hotkey.bind(mash, "L", function() movewindow("right") end)
 
@@ -105,4 +112,3 @@ hotkey.bind(mash, "L", function() movewindow("right") end)
 -- hotkey.bind(mash, 'U', ext.grid.resizewindow_taller)
 -- hotkey.bind(mash, 'O', ext.grid.resizewindow_wider)
 -- hotkey.bind(mash, 'I', ext.grid.resizewindow_thinner)
-
