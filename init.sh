@@ -36,3 +36,5 @@ fi
 
 ~/.config> ln -s ~/.personal/shell/fish .
 ln -vs "${ANCHOR}/shell/fish ~/.config/fish"
+
+ln -vs "${ANCHOR}/mac_os_x/hydra ~/.hydra"

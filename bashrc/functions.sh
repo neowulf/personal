@@ -50,7 +50,98 @@ function iterm_title {
 }
 
 function mm {
-    \grep Service ~/.ssh/magicmirror_formatted.json | \grep --colour $1
+    \grep Service ~/.ssh/magicmirror_formatted.json | \grep --colour $@
+}
+
+function local_servers {
+    netstat -anp | grep java | awk '{print $4}' | cut -d ':' -f 1 | sort -u | grep \\.
+}
+
+function remote_servers {
+    netstat -anp | grep java | awk '{print $5}' | cut -d ':' -f 1 | sort -u | grep \\.
+}
+
+function create_scala_proj() {
+
+    local project_name=$1
+
+    mkdir ${project_name}
+    cd ${project_name} 
+
+    mkdir -p src/main/scala
+    mkdir -p project/project
+    echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.11.2")' >> project/assembly.sbt
+
+    cat > .gitignore << _EOF
+project
+target
+_EOF
+
+    cat > src/main/scala/Main.scala << _EOF
+object Main {
+    def main (args: Array[String]) = println ("Working!")
+}
+_EOF
+
+    cat > build.sbt << _EOF
+import AssemblyKeys._
+
+seq(assemblySettings: _*)
+
+name := "taste_of_riak"
+
+version := "0.1"
+
+scalaVersion := "2.11.1"
+
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "2.2.0" % "test"
+)
+
+traceLevel in run := 0
+
+fork in run := true
+
+scalacOptions ++= Seq("-optimize")
+
+mainClass in assembly := Some("Main")
+_EOF
+
+    cat > assembly.sbt << _EOF
+import AssemblyKeys._
+
+assemblySettings
+
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+  {
+    case "META-INF/MANIFEST.MF" => MergeStrategy.discard
+    case _  => MergeStrategy.first
+  }
+}
+_EOF
+}
+
+function _update_brew {
+
+    ### Force uninstalls failed python
+    #$ brew uninstall -f python
+    
+    ### Clear the brew cache
+    #$ rm -rf `brew --cache`
+    
+    ### Recreate the brew cache
+    #$ mkdir `brew --cache`
+    
+    ### Cleanup - cleans up old homebrew files
+    #$ brew cleanup
+    
+    ### Prune - removes dead symlinks in homebrew
+    #$ brew prune
+    
+    ### Doctor - runs homebrew checks for common error causing issues
+    #$ brew doctor
+    
+    #update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 }
 
 ###############################

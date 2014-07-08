@@ -5,6 +5,7 @@
 # /Applications/TextMate.app/Contents/Resources/Default.tmProperties
 exclude = "{$exclude,target}"
 
-softWrap = true  
+softWrap = true 
+ 
 tabSize = 4  
-softTabs = true
+softTabs = false
