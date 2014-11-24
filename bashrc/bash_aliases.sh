@@ -26,6 +26,10 @@ alias sumdirs="du -k -s * | sort -k1 -g -r"
 alias t="${PERSONAL_DIR}/misc/todo.txt-cli/todo.sh -d ${PERSONAL_DIR}/sub_directory_configs/todo/todo.cfg"
 alias vi="vim -u ${PERSONAL_DIR}/configs/vim/vimrc"
 
+alias activator="activator -mem 512"
+
+alias agl="ag --pager less"
+
 # alias enclock="fusermount -u ${HOME}/.passwords"
 # alias sc="enclock  && gnome-screensaver-command --lock"
 # alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ${HOME}/.passwords.encrypted ${HOME}/.passwords"

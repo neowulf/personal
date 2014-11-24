@@ -57,3 +57,5 @@
 	file-view-vpane-position = 496
 [push]
 	default = simple
+[github]
+	user = neowulf33

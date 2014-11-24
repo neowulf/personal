@@ -105,8 +105,8 @@ hotkey.bind(mashshift, 'J', function() window.focusedwindow():focuswindow_south(
 -- 
 hotkey.bind(mash, 'M', ext.grid.maximize_window)
 -- 
-hotkey.bind(mash, 'N', ext.grid.pushwindow_nextscreen)
-hotkey.bind(mash, 'P', ext.grid.pushwindow_prevscreen)
+-- hotkey.bind(mash, 'N', ext.grid.pushwindow_nextscreen)
+-- hotkey.bind(mash, 'P', ext.grid.pushwindow_prevscreen)
 -- 
 hotkey.bind(mash, 'J', ext.grid.pushwindow_down)
 hotkey.bind(mash, 'K', ext.grid.pushwindow_up)

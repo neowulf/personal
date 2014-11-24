@@ -11,6 +11,8 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/docker.sh
 
+. ${CUR_DIR}/python.sh
+
 source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
 
 ###############################
@@ -50,10 +52,10 @@ export LESS="-R"
 if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
 	export EDITOR='vim'
-	export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
+	export JAVA_HOME=$(/usr/libexec/java_home)
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
-	export M2_HOME="/usr/local/Cellar/maven2/2.2.1"
+	export M3_HOME="/usr/local/Cellar/maven/3.2.3"
     export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PERSONAL_DIR}/bin/git:${PATH}"
 else
     export EDITOR="vi"
@@ -63,3 +65,7 @@ fi
 
 export MAVEN_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m"
 export PATH="${JAVA_HOME}:${PERSONAL_DIR}/bin:${PATH}"
+
+# homebrew sbt uses this file
+# http://stackoverflow.com/a/8332600/1216965
+SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
