@@ -39,3 +39,4 @@ fi
 ln -vs "${ANCHOR}/shell/fish ~/.config/fish"
 
 ln -vs "${ANCHOR}/mac_os_x/hydra ~/.hydra"
+ln -s ${ANCHOR}/mac_os_x/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
