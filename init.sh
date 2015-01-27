@@ -9,9 +9,10 @@ if grep -q ${ANCHOR} ~/.bashrc ; then
 else
 	echo "installing bashrc" 
 	mv ~/.bashrc ~/.bashrc_temp
-	echo ". ${ANCHOR}/bashrc.sh" > ~/.bashrc
+	echo ". ${ANCHOR}/bashrc/personal_bashrc.sh" > ~/.bashrc
 	cat ~/.bashrc_temp >> ~/.bashrc
 	rm ~/.bashrc_temp
+	chmod +x ~/.bashrc
 fi
 
 # Install the configs directory
@@ -29,8 +30,8 @@ git submodule foreach git pull
 # http://dbknickerbocker.blogspot.com/2013/04/simple-fix-to-missing-toolsjar-in-jdk.html
 # Cobertura could not find tools.jar on Mac OS X
 if [[ $platform == 'macosx' ]]; then
-	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/classes.jar /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/tools.jar
-	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/lib
+#	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/classes.jar /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes/tools.jar
+#	sudo ln -s /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Classes /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/lib
 	sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport
 fi
 

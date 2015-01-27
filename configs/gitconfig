@@ -7,8 +7,8 @@
 ###
 
 [user]
-	name = siva kommuri
-	email = siva@kommuri.com
+	name = Siva Kommuri
+	email = snv.kommuri@gmail.com
 [core]
 	excludesfile = /Users/siva/.gitignore_global
 	autocrlf = input
@@ -19,7 +19,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/siva/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
 	## http://blog.tfnico.com/2010/11/git-svn-mirror-for-multiple-branches.html
@@ -27,6 +27,7 @@
 	## http://www.jukie.net/bart/blog/pimping-out-git-log
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
 	di = diff --color 
+    pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 	
 	branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
 	cd-root = rev-parse --show-cdup

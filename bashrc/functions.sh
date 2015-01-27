@@ -9,11 +9,16 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 function videa() {
     if [ $(uname) == "Darwin" ]; then
-        ${HOME}/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea `pwd`/${1}
+        ${HOME}/Applications/IntelliJ\ IDEA\ 14.app/Contents/MacOS/idea `pwd`/${1}
     else
         idea `pwd`/$1
     fi
 }
+
+function ae {
+    air play $(youtube-dl -g "${@}")
+}
+
 
 function parse_git_branch_and_add_brackets {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
