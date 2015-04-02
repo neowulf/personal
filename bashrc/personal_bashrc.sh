@@ -52,11 +52,13 @@ export LESS="-R"
 if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
 	export EDITOR='vim'
-	export JAVA_HOME=$(/usr/libexec/java_home)
+	#export JAVA_HOME=$(/usr/libexec/java_home)
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home"
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M3_HOME="/usr/local/Cellar/maven/3.2.3"
     export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PERSONAL_DIR}/bin/git:${PATH}"
+	export SCALA_HOME="/usr/local/opt/scala/idea"
 else
     export EDITOR="vi"
 	export SVN_EDITOR="vi"

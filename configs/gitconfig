@@ -8,7 +8,7 @@
 
 [user]
 	name = Siva Kommuri
-	email = snv.kommuri@gmail.com
+	email = siva.kommuri@lge.com
 [core]
 	excludesfile = /Users/siva/.gitignore_global
 	autocrlf = input
@@ -19,7 +19,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/siva/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
 	## http://blog.tfnico.com/2010/11/git-svn-mirror-for-multiple-branches.html

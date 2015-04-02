@@ -146,7 +146,7 @@ function _update_brew {
     ### Doctor - runs homebrew checks for common error causing issues
     #$ brew doctor
     
-    update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+    brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 }
 
 ###############################

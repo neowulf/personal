@@ -39,5 +39,8 @@ git pull origin master
 echo "--Textmate Jade bundle updated..."
 popd > /dev/null
 
+#
+# git clone https://github.com/xdbr/TextMate-Bundle-plantuml.git 
+
 popd
 #osascript -e 'tell app "TextMate" to reload bundles'

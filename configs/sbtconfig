@@ -1,3 +1,0 @@
-# homebrew sbt uses this file
-# http://stackoverflow.com/a/8332600/1216965
-SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
