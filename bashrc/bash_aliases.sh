@@ -16,7 +16,7 @@ else
 	alias ls='ls --color=auto'
 fi
 
-alias grep="grep --color -n --exclude=\*.svn\*"
+alias grep="grep --color --exclude=\*.svn\*"
 #alias killtcs="ps -ef | mgrep -i bootstrap | awk '{print $2}' | xargs kill"
 alias mgrep="grep -v grep | grep"
 alias pj="python -mjson.tool"
