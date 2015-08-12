@@ -11,7 +11,7 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/docker.sh
 
-. ${CUR_DIR}/python.sh
+#. ${CUR_DIR}/python.sh
 
 source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
 
@@ -42,7 +42,7 @@ HISTFILESIZE=20000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-export LESS="-R"
+export LESS="-XgmR"
 [ -x lesspipe.sh ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 ###############################

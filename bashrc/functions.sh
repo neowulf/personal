@@ -16,7 +16,9 @@ function videa() {
 }
 
 function ae {
-    air play $(youtube-dl -g "${@}")
+    # gem install airplay airplay-cli airplayer airstream
+    #air play $(youtube-dl -g "${@}")
+    airstream $(youtube-dl -g "${@}") -o apple-tv ##`air list | grep ip | cut -d ':' -f 3`
 }
 
 
@@ -148,6 +150,11 @@ function _update_brew {
     
     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 }
+
+function sshvm {
+    ssh $(VBoxManage guestproperty get Ubuntu "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{print $2}')
+}
+
 
 ###############################
 ## Quick Navigation - Marks - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html

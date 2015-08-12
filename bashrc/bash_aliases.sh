@@ -35,3 +35,5 @@ alias agl="ag --pager less"
 # alias unlock="(df | grep '/home/siva/.passwords' > /dev/null) || encfs ${HOME}/.passwords.encrypted ${HOME}/.passwords"
 # function encrypt() { openssl des3 -e -a -in $1 -out $1.des3; mv $1.des3 $1; }
 # function decrypt() { openssl des3 -d -a -in $1 -out $1.tmp; mv $1.tmp $1; }
+
+alias es="rm -rf ../../elasticsearch-1.5.1/data && ../../elasticsearch-1.5.1/bin/elasticsearch"
