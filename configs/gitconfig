@@ -25,7 +25,7 @@
 	## http://blog.tfnico.com/2010/11/git-svn-mirror-for-multiple-branches.html
 	upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
 	## http://www.jukie.net/bart/blog/pimping-out-git-log
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(blue)%an%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
 	di = diff --color 
     pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 	
