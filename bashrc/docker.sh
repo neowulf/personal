@@ -4,9 +4,22 @@ function bd {
 
 alias dl="docker ps -l -q"
 
+## http://stackoverflow.com/a/23206588/1216965
+# Kill running containers
+#docker ps -q | xargs docker kill
+
+#Delete all containers (and their associated volumes):
+#docker ps -q -a | xargs docker rm -v
+
+#Remove all images:
+#docker images -q | xargs docker rmi
+
 #Removing Containers
 #  http://stackoverflow.com/a/17237701/1216965
 # docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
+
+# Delete only the containers that are not running. Parse the "ps" output for the "Exited" string:
+# docker ps -a | awk '/Exited/ {print $1}' | xargs docker rm -v
 
 #Removing Images 
 # docker rmi -f $(docker images | \grep ^\<none | awk '{print $3}')
