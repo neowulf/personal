@@ -1,47 +1,61 @@
-function bd {
-    $(/usr/local/bin/boot2docker shellinit)
-}
+# Quickstart Containers - https://docs.docker.com/engine/userguide/basics/
+# Best Practices - http://crosbymichael.com/dockerfile-best-practices.html
+# Reference - http://docs.docker.com/engine/reference/builder/
 
-alias dl="docker ps -l -q"
-
-## http://stackoverflow.com/a/23206588/1216965
-# Kill running containers
-#docker ps -q | xargs docker kill
-
-#Delete all containers (and their associated volumes):
-#docker ps -q -a | xargs docker rm -v
-
-#Remove all images:
-#docker images -q | xargs docker rmi
-
-#Removing Containers
-#  http://stackoverflow.com/a/17237701/1216965
-# docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
-
-# Delete only the containers that are not running. Parse the "ps" output for the "Exited" string:
-# docker ps -a | awk '/Exited/ {print $1}' | xargs docker rm -v
-
-#Removing Images 
-# docker rmi -f $(docker images | \grep ^\<none | awk '{print $3}')
-
+### Vagrant
 #VBoxManage
 #VBoxManage list runningvms
 #VBoxManage controlvm
-
-## Docker
 # https://github.com/warren5236/WordpressWithVagrant/blob/UsingBootstrap.sh/Vagrantfile
 # http://stackoverflow.com/questions/15408969/how-do-i-destroy-a-vm-when-i-deleted-the-vagrant-file
 
-function init_dockerui {
-    docker run --name="dockerui" -d -p 9000:9000 -v /var/run/docker.sock:/docker.sock crosbymichael/dockerui -e /docker.sock
+### Docker
+# Debugging - http://pothibo.com/2015/7/how-to-debug-a-docker-container
+    # Run an intermediate container
+        # docker run --rm -it 9c9e81692ae9 /bin/bash
+    # Attaching to a running container
+        # docker run --name instance.project.com project.com
+        # docker exec -it instance.project.com /bin/bash
+# Run multiple commands - http://stackoverflow.com/a/23968289/1216965
+# Centos/Debian/Ubuntu - Docker / Ansible - williamyeh/ansible
+# Centos SSH - jdeathe/centos-ssh
+
+function dockerip {
+  docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-function init_portaldb {
-    # docker run --name="prod_portaldb" -t -i -p 3306:3306 -e user="zzz" -e password="yyy" -e right="WRITE" -e url="file:///Users/siva/Documents/hp/server/pipeline/database/prod_portaldb_10-20-14_table.sql" mysqldb
+function dockerui {
+  docker run --name="dockerui" -d -p 9000:9000 -v /var/run/docker.sock:/docker.sock crosbymichael/dockerui -e /docker.sock
+}
 
-    #docker run --rm  -p 3306:3306 -e MYSQL_USER=portaldbuser -e MYSQL_PASSWORD=portaldbpw -e MYSQL_DATABASE=portaldb -e MYSQL_ROOT_PASSWORD=pwd mysql
-    
-    docker run --name="prod_portaldb" -d -p 3306:3306 -e MYSQL_USER=zzz -e MYSQL_PASSWORD=yyy -e MYSQL_DATABASE=xxx -e MYSQL_ROOT_PASSWORD=pwd mysql
-    # 35 seconds
-    gunzip < /Users/siva/Documents/hp/server/pipeline/database/prod_portaldb_10-20-14_table.sql_orig.gz | mysql -h 192.168.59.103 -u zzz -p yyy
+function docker_list {
+  docker ps -l -q
+}
+
+# http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+function rm_containers_stopped {
+  # Delete only the containers that are not running. Parse the "ps" output for the "Exited" string:
+  # docker ps -a | awk '/Exited/ {print $1}' | xargs docker rm -v
+
+  docker rm $(docker ps -a -q) 
+}
+
+# http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+function rm_images_untagged {
+  #old - docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")
+  docker rmi $(docker images --quiet --filter "dangling=true")
+}
+
+function kill_containers_running {
+  ## http://stackoverflow.com/a/23206588/1216965
+  docker ps -q | xargs docker kill
+}
+
+function stop_containers_running {
+  docker stop `docker ps -q`
+}
+
+function rm_all_images {
+  #Removing Images 
+  docker rmi -f $(docker images | \grep ^\<none | awk '{print $3}')  
 }

@@ -1,6 +1,0 @@
-#!/bin/sed -f
-# Ths is a comment
-s/.//g
-s/9//g
-s/^[ 	]*//g
-s/	/ /g

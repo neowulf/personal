@@ -1,5 +1,0 @@
-#! /bin/sh
-while who | grep "^barb " > /dev/null
-do sleep 60
-done
-echo "The cat's away..."
