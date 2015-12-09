@@ -23,7 +23,7 @@ Plugin 'tpope/vim-fireplace'
 " Syntax
 Plugin 'kien/rainbow_parentheses.vim'
 " Stores current session
-Plugin 'tpope/obsession'
+Plugin 'tpope/vim-obsession'
 
 
 

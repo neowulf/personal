@@ -7,8 +7,8 @@
 ###
 
 [user]
-	name = Siva Kommuri
-	email = siva.kommuri@lge.com
+	name = neowulf33
+	email = snv.kommuri@lge.com
 [core]
 	excludesfile = /Users/siva/.gitignore_global
 	autocrlf = input
