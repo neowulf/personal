@@ -6,9 +6,6 @@
 # git clean -d -f .
 ###
 
-[user]
-	name = neowulf33
-	email = snv.kommuri@lge.com
 [core]
 	excludesfile = /Users/siva/.gitignore_global
 	autocrlf = input
@@ -58,7 +55,5 @@
 	file-view-vpane-position = 496
 [push]
 	default = simple
-[github]
-	user = neowulf33
 [color]
 	ui = auto

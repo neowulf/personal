@@ -6,3 +6,5 @@ atlassian-ide-plugin.xml
 **/fish/generated_completions/**
 **/fish/fish_history
 **/fish/fishd\.*
+
+./configs/vim/bundle/**
