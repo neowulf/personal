@@ -1,1 +1,0 @@
-/Users/siva/.personal/shell/fish ~/.config/fish

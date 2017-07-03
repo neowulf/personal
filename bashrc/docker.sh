@@ -20,6 +20,10 @@
 # Centos/Debian/Ubuntu - Docker / Ansible - williamyeh/ansible
 # Centos SSH - jdeathe/centos-ssh
 
+function docker_start {
+    bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+}
+
 function dockerip {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
@@ -59,3 +63,8 @@ function rm_all_images {
   #Removing Images 
   docker rmi -f $(docker images | \grep ^\<none | awk '{print $3}')  
 }
+
+function docker_kamon {
+    docker run -d -p 80:80 -p 81:81 -p 8125:8125/udp -p 8126:8126 --name kamon-grafana-dashboard kamon/grafana_graphite
+}
+

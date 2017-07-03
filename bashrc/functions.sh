@@ -9,7 +9,7 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 function videa() {
     if [ $(uname) == "Darwin" ]; then
-        /Applications/IntelliJ\ IDEA\ 15.app/Contents/MacOS/idea `pwd`/${1}
+        /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea `pwd`/${1}
     else
         idea `pwd`/$1
     fi

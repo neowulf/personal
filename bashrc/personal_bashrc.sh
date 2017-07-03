@@ -53,7 +53,7 @@ if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
 	export EDITOR='vim'
 	#export JAVA_HOME=$(/usr/libexec/java_home)
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home"
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M3_HOME="/usr/local/Cellar/maven/3.2.3"
@@ -70,6 +70,6 @@ export PATH="${JAVA_HOME}:${PERSONAL_DIR}/bin:${PATH}"
 
 # homebrew sbt uses this file
 # http://stackoverflow.com/a/8332600/1216965
-SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 source /usr/local/opt/autoenv/activate.sh
