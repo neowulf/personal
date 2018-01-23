@@ -4,4 +4,12 @@
 # install tpm for the user
 # install config files for the user
 
-- name: Check tmux version
+- name: Check if tmux exists
+  stat:
+    path: /usr/local/bin/tmux
+  register: tmux
+
+- include_tasks: install_tmux.yml
+  when: tmux.stat.islnk is not defined
+
+#- include_tasks: install_tpm.yml

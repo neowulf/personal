@@ -1,7 +1,9 @@
-- name: Remove existing tmux installation
+- name: Remove default tmux version
   apt:
     name: tmux
     state: absent
+    purge: yes
+  become: yes
 
 - name: Install dependencies
   apt: name='{{ item }}' state=latest update_cache=true
@@ -10,24 +12,33 @@
     - automake
     - libevent-dev
     - ncurses-dev
+    - gcc
+    - make
   become: yes
 
-- name: Get Tmux Sources
-  get_url:
-    url: '{{tmux_tgz_url}}'
-    dest: tmux.tgz
-    mode: 0644
+- name: Create temporary build directory
+  tempfile:
+    state: directory
+    suffix: tmux
+  register: tmp_dir_obj
 
-- name: Extract
+- name: Get the path of the tmpdir
+  set_fact:
+    tmpdir: '{{ tmp_dir_obj.path }}'
+
+- name: Extract Tmux Sources
   unarchive:
-    src: tmux.tgz
-    dest: '{{ tmux_dir }}'
+    src: '{{tmux_tgz_url}}'
+    dest: '{{ tmpdir }}'
+    remote_src: yes
 
 - name: configure, make, install
-  shell: "{{ item }}"
+  shell: '{{ item }}'
   args:
-    chdir: "{{ tmux_dir }}"
+    chdir: '{{ tmpdir }}/tmux-2.6'
   with_items:
     - ./configure
     - make
     - make install
+  become: yes
+

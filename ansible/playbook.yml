@@ -3,6 +3,6 @@
   vars:
     - user: ubuntu
   roles:
-    - base
-    - fish
-#    - tmux
+#    - base
+#    - fish
+    - tmux
