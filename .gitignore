@@ -6,3 +6,4 @@
 
 ./configs/vim/bundle/**
 .vagrant/
+.idea/workspace.xml
