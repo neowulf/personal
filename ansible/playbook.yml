@@ -17,9 +17,9 @@
         - git
       become: yes
 
-#- hosts: all
-#  vars:
-#    - user: vagrant
-#  roles:
-#    - fish
-##    - tmux
+- hosts: all
+  vars:
+    - user: ubuntu
+  roles:
+    - fish
+#    - tmux

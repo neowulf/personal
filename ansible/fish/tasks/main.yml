@@ -5,6 +5,7 @@
 - user:
     name: '{{ user }}'
     shell: /usr/bin/fish
+  become: yes
 
 - include_tasks: install_omf.yml
 
