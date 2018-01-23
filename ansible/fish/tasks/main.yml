@@ -9,8 +9,13 @@
 
 - include_tasks: install_omf.yml
 
-#- name: Copy fish configs
-#  copy:
+- name: Copy fish configs
+  file:
+#    src: 'fish_preexec.fish'
+    src: '{{ role_path }}/files/fish_preexec.fish'
+    dest: '~/.config/fish/conf.d/fish_preexec.fish'
+    state: link
+
 
 
 # Copy functions and into /Users/siva/.personal/fish/fish/config.fish
