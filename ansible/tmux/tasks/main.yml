@@ -12,4 +12,10 @@
 - include_tasks: install_tmux.yml
   when: tmux.stat.islnk is not defined
 
-#- include_tasks: install_tpm.yml
+- name: Copy tmux config
+  file:
+    src: '{{ role_path }}/files/tmux.conf'
+    dest: '~/.tmux.conf'
+    state: link
+
+- include_tasks: install_tpm.yml
