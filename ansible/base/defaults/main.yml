@@ -12,5 +12,11 @@ apt_packages:
   - git
 
 config_files:
-  - src: 'htoprc'
+  - src: htoprc
     dir: '~/.config/htop'
+  - src: ackrc
+    dest: '.ackrc'
+  - src: gitconfig
+    dest: '.gitconfig'
+  - src: gitignore_global
+    dest: '.gitignore_global'
