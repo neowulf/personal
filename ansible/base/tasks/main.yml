@@ -1,0 +1,24 @@
+---
+
+- name: "install packages"
+  apt: name="{{ item }}" state=latest update_cache=true
+  with_items:
+    - ntp
+    - tree
+    - psmisc
+    - htop
+    - mysql-client
+    - telnet
+    - silversearcher-ag
+    - jq
+    - dstat
+    - bc
+    - git
+  become: yes
+
+- name: "symlink this repo to ~/.personal"
+  file:
+    src: /vagrant/ansible
+    dest: ~/.personal
+    state: link
+#  become_user: '{{ user }}'

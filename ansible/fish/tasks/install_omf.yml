@@ -3,9 +3,14 @@
     url: https://get.oh-my.fish
     dest: /tmp/omf_install
     mode: 0700
-  become_user: '{{ user }}'
-
 
 - name: Install omf for '{{ user }}'
   shell: /tmp/omf_install --noninteractive --verbose -y
-  become_user: '{{ user }}'
+
+- name: Install omf packages
+  shell: 'source ~/.config/fish/conf.d/omf.fish; omf install {{ item }}'
+  with_items:
+    - z
+    - foreign-env
+  args:
+    executable: /usr/bin/fish
