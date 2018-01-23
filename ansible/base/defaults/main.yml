@@ -1,0 +1,16 @@
+apt_packages:
+  - ntp
+  - tree
+  - psmisc
+  - htop
+  - mysql-client
+  - telnet
+  - silversearcher-ag
+  - jq
+  - dstat
+  - bc
+  - git
+
+config_files:
+  - src: 'htoprc'
+    dir: '~/.config/htop'

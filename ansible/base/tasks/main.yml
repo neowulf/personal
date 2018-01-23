@@ -1,24 +1,23 @@
 ---
-
-- name: "install packages"
+- name: 'install packages'
   apt: name="{{ item }}" state=latest update_cache=true
-  with_items:
-    - ntp
-    - tree
-    - psmisc
-    - htop
-    - mysql-client
-    - telnet
-    - silversearcher-ag
-    - jq
-    - dstat
-    - bc
-    - git
+  with_items: '{{ apt_packages }}'
   become: yes
 
-- name: "symlink this repo to ~/.personal"
+- name: 'Debug'
+  debug: msg='{{ item }}'
+  with_items: '{{ config_files }}'
+
+- name: 'Create configuration directory structure'
   file:
-    src: /vagrant/ansible
-    dest: ~/.personal
+    dest: '{{ item.dir }}'
+    state: directory
+    recurse: yes
+  with_items: '{{ config_files }}'
+
+- name: 'Symlink the configuration files'
+  file:
+    src: '{{ role_path }}/files/{{ item.src }}'
+    dest: '{{ item.dir }}/{{ item.src }}'
     state: link
-#  become_user: '{{ user }}'
+  with_items: '{{ config_files }}'
