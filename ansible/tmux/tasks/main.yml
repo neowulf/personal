@@ -1,0 +1,7 @@
+---
+# remove undesirable tmux version
+# install tmux if absent
+# install tpm for the user
+# install config files for the user
+
+- name: Check tmux version

@@ -1,0 +1,33 @@
+- name: Remove existing tmux installation
+  apt:
+    name: tmux
+    state: absent
+
+- name: Install dependencies
+  apt: name='{{ item }}' state=latest update_cache=true
+  with_items:
+    - autotools-dev
+    - automake
+    - libevent-dev
+    - ncurses-dev
+  become: yes
+
+- name: Get Tmux Sources
+  get_url:
+    url: '{{tmux_tgz_url}}'
+    dest: tmux.tgz
+    mode: 0644
+
+- name: Extract
+  unarchive:
+    src: tmux.tgz
+    dest: '{{ tmux_dir }}'
+
+- name: configure, make, install
+  shell: "{{ item }}"
+  args:
+    chdir: "{{ tmux_dir }}"
+  with_items:
+    - ./configure
+    - make
+    - make install

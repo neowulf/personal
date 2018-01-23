@@ -1,0 +1,13 @@
+- name: Download omf
+  get_url:
+    url: https://get.oh-my.fish
+    dest: omf_install
+    mode: 0700
+  become_user: '{{ user }}'
+
+
+- name: Install omf for '{{ user }}'
+  shell: omf_install
+#  args:
+#    executable: /bin/bash
+  become_user: '{{ user }}'

@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/siva/Documents/lg/code/signage-repo/.repo'
-let g:netrw_dirhist_2='/Users/siva/Documents/lg/code/device/a4-device/.vagrant'
-let g:netrw_dirhist_3='/Users/siva/Documents/lg/code/device/a4-device/build/conf'
-let g:netrw_dirhist_4='/Users/siva/.tmuxinator'

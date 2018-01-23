@@ -1,0 +1,4 @@
+#!/bin/zsh -e
+rev=$(git rev-parse $1)
+git commit --fixup $@
+GIT_EDITOR=: git stashwrap rebase --autosquash -i $rev^

@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/siva/.config/omf'
+let g:netrw_dirhist_2='/Users/siva/.aws'
+let g:netrw_dirhist_3='/Users/siva/.jupyter'
+let g:netrw_dirhist_4='/Users/siva/.jupyter/nbconfig'
+let g:netrw_dirhist_5='/Users/siva/.jupyter'
+let g:netrw_dirhist_6='/Users/siva/.jupyter/nbconfig'

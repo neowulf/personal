@@ -1,0 +1,24 @@
+---
+
+- include_tasks: install_fish.yml
+
+- user:
+    name: '{{ user }}'
+    shell: /usr/bin/fish
+
+- include_tasks: install_omf.yml
+
+#- name: Install Configs
+
+# Install omf
+# Configure omf
+# ~/.local/share/omf
+
+
+# Copy functions and into /Users/siva/.personal/fish/fish/config.fish
+# Copy prompt and into /Users/siva/.personal/fish/fish/config.fish
+# Enable vi mode in fish by appending `fish_vi_key_bindings` to the prompt
+
+# Anaconda fish
+# source (conda info --root)/etc/fish/conf.d/conda.fish
+#source /usr/local/miniconda2/etc/fish/conf.d/conda.fish

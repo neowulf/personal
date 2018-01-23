@@ -1,0 +1,25 @@
+---
+- hosts: all
+  tasks:
+    - name: "install packages"
+      apt: name="{{ item }}" state=latest update_cache=true
+      with_items:
+        - ntp
+        - tree
+        - psmisc
+        - htop
+        - mysql-client
+        - telnet
+        - silversearcher-ag
+        - jq
+        - dstat
+        - bc
+        - git
+      become: yes
+
+#- hosts: all
+#  vars:
+#    - user: vagrant
+#  roles:
+#    - fish
+##    - tmux

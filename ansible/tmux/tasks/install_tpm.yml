@@ -1,0 +1,7 @@
+- name: Install tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: '{{ user_home }}/.tmux/plugins/tpm'
+
+- name: Install tpm plugins
+  shell: '{{ user_home }}/.tmux/plugins/tpm/bin/install_plugins'

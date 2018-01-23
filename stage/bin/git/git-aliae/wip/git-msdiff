@@ -1,0 +1,6 @@
+#!/bin/bash
+
+IFS=$'\n'
+select diff in `git log --oneline $(git merge-base HEAD master)..`; do
+    git diff ${diff%% *}^\!
+done

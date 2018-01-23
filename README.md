@@ -1,3 +1,22 @@
+# My personal git
+
+## Setup 
+
+`vagrant up` to test the installation
+
+## What gets installed 
+
+1. tmux
+1. fish
+1. bash files
+1. git
+1. git `hub` utility
+1. anaconda
+1. jupyter configurations
+1. important packages
+
+
+
 bin/
     multi-purpose utility scripts
 configs/

@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="80b7a1ad-7a14-4401-b8c1-0f8b0dde93d0" name="Default" comment="update">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/vagrant_cwd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Vagrantfile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_preexec.fish" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_prompt.fish" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/fish/tasks/install_omf.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/fish/tasks/main.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/playbook.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/tmux/meta/main.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/tmux/tasks/install_tmux.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/tmux/tasks/install_tpm.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/tmux/tasks/main.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible/tmux/vars/main.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bashrc/functions.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/date.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/dumpRestoreDev.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/dumpRestoreDev_1.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/enyo-chrome.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/gen_svn_authors" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/LICENSE.MIT" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-amend" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-cof" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-foc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-pause" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-resume" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/bin/git-uncommit" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-backward" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-camelgrep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-chop" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-clarity" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-clip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-co" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-cobra" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-commit-" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-created" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-cv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-cvi" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-deleted" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-deploy" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-diffat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-diffme" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-egrep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-fap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-fave" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-fetch-fork" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-fetch-pr" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-ff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-fixup" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-forward" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-genes" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-get-series" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-git" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-graphviz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-happening" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-hub" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-ill" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-local" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mbase" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mdiff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mlog" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mrange" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-msdiff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-mt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-norig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-nows" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pave" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-plog" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pop" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-ppp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-preflog" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-public-base" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pull-request" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pushme" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-rebaseme" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-remerge" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-resetme" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-shunt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-slog" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-smlog" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-st" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-stashwrap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-swap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-switch-messages" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-switch-trees" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-topic-base" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-topic-graph" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-topic-log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-topic-merge" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-topic-rebase" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-unapply" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-undeployed" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-upst" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-url" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-vamt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-vi" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-vim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-whereami" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-wtf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git-svn-diff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/git/git_author_rename.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/Event2Text.scpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/alert.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/finder.scpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/gw.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/iTunesName.scpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/iterm/launch_iterm.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/iterm/multissh_broadcast_multipane.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/iterm/multissh_broadcast_tabs.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/mateup.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/message_linker.scpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/myconn.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/preview.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/mac_os_x/window_tiles.scpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/nginxstats.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/pictures_deduplication.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/bin/svn_diff_wrapper.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/ackrc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/gitconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/gitignore_global" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/inputrc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/kerlrc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/sbtconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/tm_properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/.netrwhist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/colors/molokai.vim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/ftdetect/scala.vim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/indent/scala.vim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/syntax/scala.vim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/configs/vim/vimrc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/fish/fish/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/fish/fish/functions/rvm.fish" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/clipmenu/init.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/clipmenu/script/action/fromEpoch.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/hydra/grid.lua" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/hydra/init.lua" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/iterm/com.googlecode.iterm2.plist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/iterm/readme.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/sourcetree/open_intellij.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/sourcetree/open_rep.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/workflow/Get Message Id.workflow/Contents/Info.plist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/workflow/Get Message Id.workflow/Contents/QuickLook/Preview.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stage/mac_os_x/workflow/Get Message Id.workflow/Contents/document.wflow" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.hydra" afterPath="$PROJECT_DIR$/stage/.hydra" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/bashrc/README.txt" afterPath="$PROJECT_DIR$/stage/bashrc/README.txt" />
+      <change beforePath="$PROJECT_DIR$/bashrc/bash_aliases.sh" afterPath="$PROJECT_DIR$/stage/bashrc/bash_aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/bashrc/docker.sh" afterPath="$PROJECT_DIR$/stage/bashrc/docker.sh" />
+      <change beforePath="$PROJECT_DIR$/bashrc/functions.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bashrc/personal_bashrc.sh" afterPath="$PROJECT_DIR$/stage/bashrc/personal_bashrc.sh" />
+      <change beforePath="$PROJECT_DIR$/bashrc/python.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bashrc/vagrant.sh" afterPath="$PROJECT_DIR$/stage/bashrc/vagrant.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/date.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/dumpRestoreDev.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/dumpRestoreDev_1.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/enyo-chrome.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/git/gen_svn_authors" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/git/git-aliae" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/git/git-info" afterPath="$PROJECT_DIR$/stage/bin/git/git-info" />
+      <change beforePath="$PROJECT_DIR$/bin/git/git-meld" afterPath="$PROJECT_DIR$/stage/bin/git/git-meld" />
+      <change beforePath="$PROJECT_DIR$/bin/git/git-svn-diff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/git/git_author_rename.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/git/glog" afterPath="$PROJECT_DIR$/stage/bin/git/glog" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/Event2Text.scpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/alert.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/finder.scpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/gw.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/iTunesName.scpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/iterm/launch_iterm.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/iterm/multissh_broadcast_multipane.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/iterm/multissh_broadcast_tabs.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/mateup.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/message_linker.scpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/myconn.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/preview.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/mac_os_x/window_tiles.scpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/nginxstats.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/pictures_deduplication.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/svn_diff_wrapper.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/ackrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/gitconfig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/gitignore_global" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/inputrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/kerlrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/sbtconfig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/tm_properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/tmux.conf" afterPath="$PROJECT_DIR$/ansible/tmux/files/tmux.conf" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/.netrwhist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/bundle/.vundle/script-names.vim-scripts.org.json" afterPath="$PROJECT_DIR$/ansible/fish/tasks/install_fish.yml" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/colors/molokai.vim" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/ftdetect/scala.vim" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/indent/scala.vim" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/syntax/scala.vim" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/configs/vim/vimrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fish/fish/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fish/fish/config.fish" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fish/fish/functions/fish_preexec.fish" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fish/fish/functions/fish_prompt.fish" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fish/fish/functions/rvm.fish" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/init.sh" afterPath="$PROJECT_DIR$/stage/init.sh" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/clipmenu/init.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/clipmenu/script/action/fromEpoch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/hydra/grid.lua" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/hydra/init.lua" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/iterm/com.googlecode.iterm2.plist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/iterm/readme.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/sourcetree/open_intellij.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/sourcetree/open_rep.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/workflow/Get Message Id.workflow/Contents/Info.plist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/workflow/Get Message Id.workflow/Contents/QuickLook/Preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mac_os_x/workflow/Get Message Id.workflow/Contents/document.wflow" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/misc/Outlook.safariextension/Info.plist" afterPath="$PROJECT_DIR$/stage/misc/Outlook.safariextension/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/misc/Outlook.safariextension/Settings.plist" afterPath="$PROJECT_DIR$/stage/misc/Outlook.safariextension/Settings.plist" />
+      <change beforePath="$PROJECT_DIR$/misc/Outlook.safariextension/better_outlook_web_access.user.js" afterPath="$PROJECT_DIR$/stage/misc/Outlook.safariextension/better_outlook_web_access.user.js" />
+      <change beforePath="$PROJECT_DIR$/misc/idea/idea.vmoptions" afterPath="$PROJECT_DIR$/stage/misc/idea/idea.vmoptions" />
+      <change beforePath="$PROJECT_DIR$/misc/idea/readme.txt" afterPath="$PROJECT_DIR$/stage/misc/idea/readme.txt" />
+      <change beforePath="$PROJECT_DIR$/misc/ssh-tunnel.pac" afterPath="$PROJECT_DIR$/stage/misc/ssh-tunnel.pac" />
+      <change beforePath="$PROJECT_DIR$/misc/todo.txt-cli" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/readme_apps.txt" afterPath="$PROJECT_DIR$/stage/readme_apps.txt" />
+      <change beforePath="$PROJECT_DIR$/readme_brew.txt" afterPath="$PROJECT_DIR$/stage/readme_brew.txt" />
+      <change beforePath="$PROJECT_DIR$/readme_intellij.txt" afterPath="$PROJECT_DIR$/stage/readme_intellij.txt" />
+      <change beforePath="$PROJECT_DIR$/sbtopts" afterPath="$PROJECT_DIR$/stage/sbtopts" />
+      <change beforePath="$PROJECT_DIR$/shell/fish/config.fish" afterPath="$PROJECT_DIR$/stage/shell/fish/config.fish" />
+      <change beforePath="$PROJECT_DIR$/shell/fish/functions/fish_prompt.fish" afterPath="$PROJECT_DIR$/stage/shell/fish/functions/fish_prompt.fish" />
+      <change beforePath="$PROJECT_DIR$/sub_directory_configs/groovy/grapeConfig.xml" afterPath="$PROJECT_DIR$/stage/sub_directory_configs/groovy/grapeConfig.xml" />
+      <change beforePath="$PROJECT_DIR$/sub_directory_configs/todo/todo.cfg" afterPath="$PROJECT_DIR$/stage/sub_directory_configs/todo/todo.cfg" />
+    </list>
+    <ignored path="personal.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="personal" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="install_fish.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/install_fish.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playbook.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ansible/playbook.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_omf.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/install_omf.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../thirdparty_ro_opensource/BashSupport" value="1455696718000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/fish/fish/config.fish" />
+        <option value="$PROJECT_DIR$/Vagrantfile" />
+        <option value="$PROJECT_DIR$/ansible/tmux/meta/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/tmux/vars/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/tmux/tasks/install_tpm.yml" />
+        <option value="$PROJECT_DIR$/ansible/tmux/tasks/install_tmux.yml" />
+        <option value="$PROJECT_DIR$/ansible/tmux/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_prompt.fish_1" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ansible/fish/files/config/fish/config.fish" />
+        <option value="$PROJECT_DIR$/ansible/fish/tasks/install_fish.yml" />
+        <option value="$PROJECT_DIR$/ansible/fish/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/fish/tasks/install_omf.yml" />
+        <option value="$PROJECT_DIR$/ansible/playbook.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2633" />
+    <option name="y" value="251" />
+    <option name="width" value="1117" />
+    <option name="height" value="829" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="NBKnowledgePane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="fish" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GO_FMT" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stage/fish/fish/functions" />
+      <recent name="$PROJECT_DIR$/ansible/fish/files/config/fish" />
+      <recent name="$PROJECT_DIR$/stage" />
+      <recent name="$PROJECT_DIR$/ansible/tmux/files" />
+      <recent name="$PROJECT_DIR$/ansible/tmux" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local">
+      <setting name="replType" value="1" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JRubyCucumberRunConfigurationType" factoryName="JRuby Cucumber">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-Dforce.jruby.jit=true -Djruby.debug.fullTrace=true" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="personal" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="personal" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="personal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../lg/code/client/a4-dp" value="2860486506000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/client/a4-dp-tutorial" value="1430243950000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/scalajs-react" value="1435008472000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-contentportal" value="1430872398000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-device" value="1435699374000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-dispatcher" value="1449339936000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-portaldispatcher" value="1439337729000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-provider" value="1427839209000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-softwareupdate" value="1438625530000" />
+        <entry key="$PROJECT_DIR$/../../../lg/code/server/a4-user" value="1450734250000" />
+        <entry key="$PROJECT_DIR$/../../thirdparty_ro_opensource/akka" value="17430789418000" />
+        <entry key="$PROJECT_DIR$/../../thirdparty_ro_opensource/scalaz" value="1449116251000" />
+        <entry key="$PROJECT_DIR$/../../thirdparty_ro_opensource/spray" value="1430518407000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80b7a1ad-7a14-4401-b8c1-0f8b0dde93d0" name="Default" comment="" />
+      <created>1459285102093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1459285102093</updated>
+      <workItem from="1459285103514" duration="409000" />
+      <workItem from="1499114289491" duration="2351000" />
+      <workItem from="1516734038367" duration="3965000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1499117146492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1499117146492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6725000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2633" y="251" width="1117" height="829" extended-state="0" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7689119" sideWeight="0.5216365" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889876" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3814714" sideWeight="0.47836348" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24812834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4891008" sideWeight="0.49333334" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31627908" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Samebug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24262847" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889876" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26619434" sideWeight="0.50735766" order="6" side_tool="false" content_ui="tabs" x="1920" y="23" width="1916" height="232" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48668796" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32331607" sideWeight="0.49645948" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23554008" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.280829" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" x="2678" y="104" width="889" height="132" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68911916" sideWeight="0.49914238" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/misc/todo.txt-cli" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="atlassian-ide-plugin-workspace-issues">
+    <option name="view">
+      <JiraViewConfigurationBean>
+        <option name="viewFilterId" value="" />
+      </JiraViewConfigurationBean>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/stage/bin/git/git-meld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/git/git-info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/git/gen_svn_authors">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/git/git-aliae/wip/git-pdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/date.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/mac_os_x/alert.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bin/mac_os_x/mateup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/colors/molokai.vim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/ftdetect/scala.vim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/indent/scala.vim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/syntax/scala.vim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/.netrwhist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/vim/vimrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/ackrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/gitconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/gitignore_global">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/inputrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/kerlrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/sbtconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/configs/tm_properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/mac_os_x/hydra/grid.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/mac_os_x/iterm/com.googlecode.iterm2.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/misc/idea/idea.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/misc/idea/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/misc/ssh-tunnel.pac">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/sbtopts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/readme_apps.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/readme_brew.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/readme_intellij.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/files/tmux.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/tasks/install_tpm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/fish/fish/fishd.60f81dc39d06">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/fish/fish/fish_history">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/fish/fish/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_prompt.fish">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/fish/fish/functions/rvm.fish">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage/bashrc/bash_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/files/config/fish/config.fish">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_prompt.fish">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/files/config/fish/functions/fish_preexec.fish">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/meta/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/tmux/tasks/install_tmux.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/install_fish.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/install_omf.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/fish/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/playbook.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

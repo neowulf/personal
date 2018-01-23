@@ -1,0 +1,9 @@
+- name: Subscribe to fish channel
+  apt_repository:
+    repo: 'ppa:fish-shell/release-2'
+
+- name: Install Fish
+  apt:
+    name: fish
+    update_cache: yes
+    state: latest
