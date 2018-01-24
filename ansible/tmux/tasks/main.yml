@@ -14,7 +14,7 @@
 
 - name: Copy tmux config
   file:
-    src: '{{ role_path }}/files/tmux.conf'
+    src: '~/.personal/tmux/files/tmux.conf'
     dest: '~/.tmux.conf'
     state: link
 

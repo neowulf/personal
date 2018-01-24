@@ -1,12 +1,14 @@
 ---
+- name: "symlink this repo to ~/.personal"
+  file:
+    src: '{{ playbook_dir }}'
+    dest: ~/.personal
+    state: link
+
 - name: 'install packages'
   apt: name="{{ item }}" state=latest update_cache=true
   with_items: '{{ apt_packages }}'
   become: yes
-
-- name: 'Debug'
-  debug: msg='{{ item }}'
-  with_items: '{{ config_files }}'
 
 - name: 'Create configuration directory structure'
   file:
@@ -17,7 +19,7 @@
 
 - name: 'Symlink the configuration files'
   file:
-    src: '{{ role_path }}/files/{{ item.src }}'
+    src: '~/.personal/base/files/{{ item.src }}'
     dest: '{{ item.dir | default("~") }}/{{ item.dest | default(item.src) }}'
     state: link
   with_items: '{{ config_files }}'

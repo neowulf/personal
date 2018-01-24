@@ -26,16 +26,24 @@
   set_fact:
     tmpdir: '{{ tmp_dir_obj.path }}'
 
+- name: Get Tmux Sources
+  get_url:
+    url: '{{tmux_tgz_url}}'
+    dest: '{{ tmpdir }}/tmux.tgz'
+    mode: 0644
+    checksum: '{{ tmux_tgz_chksum }}'
+
 - name: Extract Tmux Sources
   unarchive:
-    src: '{{tmux_tgz_url}}'
+    src: '{{ tmpdir }}/tmux.tgz'
     dest: '{{ tmpdir }}'
     remote_src: yes
+    extra_opts: [ '--strip-components=1' ]
 
 - name: configure, make, install
   shell: '{{ item }}'
   args:
-    chdir: '{{ tmpdir }}/tmux-2.6'
+    chdir: '{{ tmpdir }}'
   with_items:
     - ./configure
     - make

@@ -5,3 +5,4 @@
 
 - name: Install tpm plugins
   shell: '~/.tmux/plugins/tpm/bin/install_plugins'
+  ignore_errors: true

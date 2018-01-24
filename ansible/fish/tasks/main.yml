@@ -11,6 +11,9 @@
 
 - name: Copy fish configs
   file:
-    src: '{{ role_path }}/files/fish_preexec.fish'
-    dest: '~/.config/fish/conf.d/fish_preexec.fish'
+    src: '~/.personal/fish/files/{{ item.src }}'
+    dest: '{{ item.dest }}'
     state: link
+  with_items:
+    - { src: 'fish_preexec.fish', dest: '~/.config/fish/conf.d/fish_preexec.fish'}
+    - { src: 'custom.fish', dest: '~/.config/fish/conf.d/custom.fish'}

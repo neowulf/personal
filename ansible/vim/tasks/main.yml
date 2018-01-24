@@ -2,26 +2,10 @@
 - name: Install VIM
   apt: name=vim state=latest
 
-- name: Create vim directory structure
-  file:
-    dest: '{{ item }}'
-    state: directory
-    recurse: yes
-  with_items:
-    - '~/.vim'
-    - '~/.vim/colors'
-    - '~/.vim/bundle'
-
 - name: Copy vim configurations
   file:
-    src: '{{ role_path }}/files/vimrc'
-    dest: '~/.vim/vimrc'
-    state: link
-
-- name: Copy vim colors configurations
-  file:
-    src: '{{ role_path }}/files/colors/molokai.vim'
-    dest: '~/.vim/colors/molokai.vim'
+    src: '~/.personal/vim/files'
+    dest: '~/.vim'
     state: link
 
 - name: Clone vundle repo
