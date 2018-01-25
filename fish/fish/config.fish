@@ -9,7 +9,24 @@ source $OMF_PATH/init.fish
 
 source ~/.personal/bashrc/bash_aliases.sh
 
-#set -x ANSIBLE_HOME '/usr/local/Cellar/ansible/2.1.0.0'
-rvm default
-
 source ~/.config/fish/functions/fish_preexec.fish
+
+#date
+#echo 'starting rvm'
+#source ~/.config/fish/functions/rvm.fish
+#rvm default &
+#rvm default > /dev/null 2>&1 &
+#echo 'ending rvm'
+#date
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/siva/Documents/lg/code/whiteboard/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/siva/Documents/lg/code/whiteboard/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/siva/Documents/lg/code/whiteboard/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/siva/Documents/lg/code/whiteboard/serverless/node_modules/tabtab/.completions/sls.fish
+
+# source (conda info --root)/etc/fish/conf.d/conda.fish 
+source /usr/local/miniconda2/etc/fish/conf.d/conda.fish 
+
+fish_vi_key_bindings

@@ -14,9 +14,10 @@ fontSize         = 11
 lineEndings      = '\n'
 showInvisibles   = true
 softWrap         = true
-softTabs         = false
-tabSize          = 4
+softTabs         = true
+tabSize          = 2
 spellChecking    = false
+wrapColumn       = "Use Window Frame"
 
 # Now using CombinedCasts theme (of course)
 
@@ -35,8 +36,3 @@ PATH   = "$PATH:$HOME/Scripts"
 TM_GIT = "/usr/bin/git"
 TM_RUBY = "/Users/siva/.rvm/rubies/ruby-2.1.0/bin/ruby"
 
-[ text ]
-spellChecking    = true
-wrapColumn       = "Use Window Frame"
-softTabs         = true
-tabSize          = 2

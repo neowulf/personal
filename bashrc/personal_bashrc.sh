@@ -11,8 +11,6 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/docker.sh
 
-#. ${CUR_DIR}/python.sh
-
 source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
 
 ###############################
