@@ -11,10 +11,14 @@ apt_packages:
   - bc
   - git
 
+# src: required
+# dest: default is { src }
+# dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory
+
 config_files:
 
   - src: htop
-    dir: '~/.config'
+    dest_dir: '{{ ansible_env.HOME }}/.config'
 
   - src: ackrc
     dest: '.ackrc'
@@ -24,3 +28,16 @@ config_files:
 
   - src: gitignore_global
     dest: '.gitignore_global'
+
+  - src: inputrc
+    dest: '.inputrc'
+
+  - src: screenrc
+    dest: '.screenrc'
+
+  - src: sbt
+    dest: '.sbt'
+
+  - src: 'sbtopts'
+    dest_dir: '/usr/local/etc'
+    become: yes

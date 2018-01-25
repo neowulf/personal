@@ -1,0 +1,33 @@
+Host * !some.host.com
+    controlmaster auto
+    controlpath ~/.ssh/tmp/ssh-%r%h@:%p
+    # Send alive packet every 30 seconds to the server - http://bit.ly/2bzKkCS
+    ServerAliveInterval 10
+    # If session is hung, type in '@' to drop connection. Type '@?' to view all options
+    EscapeChar @
+    # ForwardX11 yes
+
+Host jumpbox
+  User ubuntu
+  IdentityFile ~/.ssh/jumpbox.pem
+  HostName 11.111.111.11
+  Port 40022
+
+Host server-*
+    User siva
+    IdentityFile ~/.ssh/hp/id_rsa
+    ForwardAgent yes
+
+Host s.*
+    User root
+    ProxyCommand ssh -q jsbdev nc $(echo %h | cut -d . -f 2) 22
+    LocalForward 9080 172.24.111.11:8080
+    RemoteForward 9080 172.24.111.12:8081
+
+Host co-jump
+    User root
+    ProxyJump jumpbox
+
+Host hp-jsbdev
+    HostName jumpbox1.pod1.sbdev-core.gramws.com
+    LocalForward 9080 172.24.192.128:8080

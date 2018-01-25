@@ -14,8 +14,8 @@
 
 - name: Copy tmux config
   file:
-    src: '~/.personal/tmux/files/tmux.conf'
-    dest: '~/.tmux.conf'
+    src: '{{ ansible_env.HOME }}/.personal/tmux/files/tmux.conf'
+    dest: '{{ ansible_env.HOME }}/.tmux.conf'
     state: link
 
 - include_tasks: install_tpm.yml

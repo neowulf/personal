@@ -1,0 +1,7 @@
+[Boto]
+
+# http://boto.cloudhackers.com/en/latest/boto_config_tut.html#boto
+
+debug = 2
+num_retries = 10
+

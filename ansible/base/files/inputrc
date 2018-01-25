@@ -1,0 +1,30 @@
+###########
+# Article - https://www.topbug.net/blog/2017/07/31/inputrc-for-humans/
+# Documentation - https://tiswww.case.edu/php/chet/readline/readline.html
+###########
+
+$include /etc/inputrc
+
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+set completion-ignore-case On
+set expand-tilde on
+set convert-meta off
+set input-meta on
+set output-meta on
+set show-all-if-ambiguous on
+set visible-stats on
+set -o vi
+set colored-stats on
+set completion-prefix-display-length 3
+set mark-symlinked-directories on
+set show-all-if-unmodified on

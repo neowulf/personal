@@ -1,8 +1,8 @@
 - name: Install tpm
   git:
     repo: https://github.com/tmux-plugins/tpm
-    dest: '~/.tmux/plugins/tpm'
+    dest: '{{ ansible_env.HOME }}/.tmux/plugins/tpm'
 
 - name: Install tpm plugins
-  shell: '~/.tmux/plugins/tpm/bin/install_plugins'
+  shell: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/install_plugins'
   ignore_errors: true

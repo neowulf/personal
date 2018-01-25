@@ -1,0 +1,10 @@
+---
+- name: Check root conda environment
+
+- name: Install jupyter
+  shell: |
+    conda install jupyter yapf
+    pip install jupyter_contrib_nbextensions jupyter-nbextensions-configurator jupyterthemes
+    jupyter contrib nbextension install --sys-prefix
+    jupyter nbextensions_configurator enable --sys-prefix
+    #rm -rf /Users/siva/Library/Jupyter/

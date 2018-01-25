@@ -11,8 +11,6 @@ PERSONAL_DIR="$(cd "${CUR_DIR}" && cd .. && pwd )"
 
 . ${CUR_DIR}/docker.sh
 
-source ${CUR_DIR}/../misc/todo.txt-cli/todo_completion
-
 ###############################
 ## PROMPT
 ###############################
@@ -51,14 +49,14 @@ if [ $(uname) == "Darwin" ]; then
 	#export EDITOR='mate -w'
 	export EDITOR='vim'
 	#export JAVA_HOME=$(/usr/libexec/java_home)
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
+ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 	export GROOVY_HOME="/usr/local/Cellar/groovy/2.1.1/libexec"
 	export GIT_EDITOR="mate -w -l 1"
 	export M3_HOME="/usr/local/Cellar/maven/3.2.3"
-    export PATH="${M2_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PERSONAL_DIR}/bin/git:${PATH}"
+ export PATH="${M3_HOME}:${PERSONAL_DIR}/bin/mac_os_x:${PERSONAL_DIR}/bin/git:${PATH}"
 	export SCALA_HOME="/usr/local/opt/scala/idea"
 else
-    export EDITOR="vi"
+ export EDITOR="vi"
 	export SVN_EDITOR="vi"
 	export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 fi

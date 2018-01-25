@@ -1,0 +1,36 @@
+# Instructions #
+
+1. Remove from the payload `for(;;);`
+	1. Instead, try this command on the file - `jq '.[-8:]'`)
+2. Generate the magicmirror_formatted.json
+
+	`cat mm_orig_20140804.json | jq '.[0].changes[3][2]' | less > ../magicmirror_formatted.json`
+3. Use the following function to then search for the interesting service:
+
+    function mm ()
+    {
+        \grep Service ~/.ssh/magicmirror_formatted.json | \grep --colour $@
+    }
+
+
+# Interesting Operations #
+
+1. Number of keys
+
+	`cat mm_orig_20140804.json | jq '.[0] | length'`
+2. List the keys
+
+	`cat mm_orig_20140804.json | jq '.[0] | keys'`
+3. List the nodes
+
+	` cat mm_orig_20140804.json | jq '.[0].changes[3]'`
+4. List the environments
+
+	`cat mm_orig_20140804.json | jq '.[0].changes[3][2][][1]?.caption'`
+5. List the nodes
+
+	`cat mm_orig_20140804.json | jq '.[0].changes[3][2][4][2]'`
+6. SBDEV nodes
+
+	`cat mm_orig_20140804.json | jq '.[0].changes[3][2][6]'`
+

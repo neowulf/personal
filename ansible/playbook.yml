@@ -7,3 +7,5 @@
     - fish
     - tmux
     - vim
+    - andrewrothstein.miniconda
+#    - conda

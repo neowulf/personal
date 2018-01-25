@@ -6,12 +6,11 @@
 
 ## What gets installed 
 
-1. tmux
-1. fish
 1. bash files
-1. git
-1. git `hub` utility
 1. anaconda
+ root - jupyter, aws, awless, mitmproxy, matplotlib, tmuxp
+1. ~/.matplotlib/matplotlibrc contains "backend : TkAgg"
+1. exercism
 1. jupyter configurations
 1. important packages
 

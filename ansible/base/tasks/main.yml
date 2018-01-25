@@ -2,7 +2,7 @@
 - name: "symlink this repo to ~/.personal"
   file:
     src: '{{ playbook_dir }}'
-    dest: ~/.personal
+    dest: '{{ ansible_env.HOME }}/.personal'
     state: link
 
 - name: 'install packages'
@@ -12,14 +12,15 @@
 
 - name: 'Create configuration directory structure'
   file:
-    dest: '{{ item.dir | default("~") }}'
+    dest: '{{ item.dest_dir | default(ansible_env.HOME) }}'
     state: directory
     recurse: yes
   with_items: '{{ config_files }}'
 
 - name: 'Symlink the configuration files'
   file:
-    src: '~/.personal/base/files/{{ item.src }}'
-    dest: '{{ item.dir | default("~") }}/{{ item.dest | default(item.src) }}'
+    src: '{{ ansible_env.HOME }}/.personal/base/files/{{ item.src }}'
+    dest: '{{ item.dest_dir | default(ansible_env.HOME) }}/{{ item.dest | default(item.src) }}'
     state: link
   with_items: '{{ config_files }}'
+  become: '{{ item.become | default("no") }}'

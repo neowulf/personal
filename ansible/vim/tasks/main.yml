@@ -4,14 +4,14 @@
 
 - name: Copy vim configurations
   file:
-    src: '~/.personal/vim/files'
-    dest: '~/.vim'
+    src: '{{ ansible_env.HOME }}/.personal/vim/files'
+    dest: '{{ ansible_env.HOME }}/.vim'
     state: link
 
 - name: Clone vundle repo
   git:
     repo: https://github.com/VundleVim/Vundle.vim.git
-    dest: ~/.vim/bundle/Vundle.vim
+    dest: '{{ ansible_env.HOME }}/.vim/bundle/Vundle.vim'
     update: no
 
 - name: Install vundle plugins

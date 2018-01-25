@@ -21,5 +21,6 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "ansible/playbook.yml"
     # ansible.verbose = "-vvv"
     ansible.raw_arguments = [ "--user", "ubuntu" ]
+    ansible.compatibility_mode = '2.0'
   end
 end
