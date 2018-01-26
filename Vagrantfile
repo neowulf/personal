@@ -12,10 +12,13 @@ Vagrant.configure("2") do |config|
 
   # config.vm.network "private_network", ip: "192.168.50.4"
 
-  # config.vm.network "forwarded_port", guest: 8080, host: 8080
   # config.vm.network "forwarded_port", guest: 4040, host: 4040
   #
   # config.ssh.extra_args="-R 9200:localhost:9200"
+
+  # Jupyter
+  # config.vm.network "forwarded_port", guest: 8889, host: 8889
+  config.ssh.extra_args="-L 8889:localhost:8889"
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "ansible/playbook.yml"

@@ -1,0 +1,20 @@
+name: py36
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - jupyter
+  - yapf
+  - nb_conda
+  - pip:
+    - jupyter_contrib_nbextensions
+    - jupyter-nbextensions-configurator
+    - jupyterthemes
+    - tmuxp
+    - awscli
+    - awslogs
+    - mitmproxy
+    - boto3
+prefix: /home/ubuntu/.conda/envs/conda_root
+

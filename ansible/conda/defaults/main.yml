@@ -1,0 +1,17 @@
+# src: required
+# dest: default is { src }
+# dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory
+
+config_files:
+
+  - src: jupyter
+    dest: '.jupyter'
+
+  - src: boto
+    dest: '.boto'
+
+  - src: condarc
+    dest: '.condarc'
+
+  - src: matplotlibrc
+    dest: '.matplotlibrc'

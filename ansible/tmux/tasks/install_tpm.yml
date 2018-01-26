@@ -5,4 +5,5 @@
 
 - name: Install tpm plugins
   shell: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/install_plugins'
+  async: 120
   ignore_errors: true

@@ -1,10 +1,37 @@
 ---
-- name: Check root conda environment
+- name: 'Symlink the configuration files'
+  file:
+    src: '{{ ansible_env.HOME }}/.personal/conda/files/{{ item.src }}'
+    dest: '{{ item.dest_dir | default(ansible_env.HOME) }}/{{ item.dest | default(item.src) }}'
+    state: link
+  with_items: '{{ config_files }}'
 
-- name: Install jupyter
-  shell: |
-    conda install jupyter yapf
-    pip install jupyter_contrib_nbextensions jupyter-nbextensions-configurator jupyterthemes
-    jupyter contrib nbextension install --sys-prefix
-    jupyter nbextensions_configurator enable --sys-prefix
-    #rm -rf /Users/siva/Library/Jupyter/
+- name: Link conda.fish to conf.d
+  file:
+    src: /usr/local/anaconda/etc/fish/conf.d/conda.fish
+    dest: '{{ ansible_env.HOME }}/.config/fish/conf.d/conda.fish'
+    state: link
+
+- name: 'install dependency for the mitmproxy'
+  apt: name='libssl-dev' state=latest update_cache=true
+  become: yes
+
+- name: Create default conda environment
+  shell: >
+    /usr/local/anaconda/bin/conda env create --force --quiet --file {{ ansible_env.HOME }}/.personal/conda/files/conda_environment.yml
+  args:
+    executable: /usr/bin/fish
+
+#- name: Link conda.sh
+#  file:
+#    src: /usr/local/anaconda/etc/profile.d/conda.sh
+#    dest: /etc/profile.d/conda.sh
+#    state: link
+#  become: yes
+
+- name: Configure jupyter notebook
+  remote_user: ubuntu
+  shell: >-
+    /usr/local/anaconda/bin/conda activate py36;
+    /home/ubuntu/.conda/envs/py36/bin/jupyter contrib nbextension install --sys-prefix;
+    /home/ubuntu/.conda/envs/py36/bin/jupyter nbextensions_configurator enable --sys-prefix

@@ -16,4 +16,5 @@
 
 - name: Install vundle plugins
   shell: vim +PluginInstall +qall
-
+  async: 120
+  poll: 0

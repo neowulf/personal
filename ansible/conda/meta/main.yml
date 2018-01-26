@@ -1,3 +1,5 @@
 dependencies:
   - src: andrewrothstein.miniconda
     version: v5.1.2
+  - src: base
+  - src: fish

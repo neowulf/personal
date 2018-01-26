@@ -10,6 +10,8 @@ apt_packages:
   - dstat
   - bc
   - git
+  - gcc
+  - make
 
 # src: required
 # dest: default is { src }
@@ -34,10 +36,3 @@ config_files:
 
   - src: screenrc
     dest: '.screenrc'
-
-  - src: sbt
-    dest: '.sbt'
-
-  - src: 'sbtopts'
-    dest_dir: '/usr/local/etc'
-    become: yes

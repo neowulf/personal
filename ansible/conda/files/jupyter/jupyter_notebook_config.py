@@ -6,6 +6,10 @@ c.InteractiveShell.ast_node_interactivity = 'all'
 
 c.InlineBackend.figure_format = 'retina'
 
+c.InteractiveShellApp.exec_lines=[
+    'import sys; sys.path.append("/usr/local/anaconda/bin/conda")'
+]
+
 ### If you want to auto-save .html and .py versions of your notebook:
 # modified from: https://github.com/ipython/ipython/issues/8009
 import os
