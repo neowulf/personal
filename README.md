@@ -32,7 +32,14 @@ To pull git submodules, perform:
 
 	git submodule init
 	git submodule update
+	
 	conda create -n personal python=3.6
 	source activate personal
-	pip install ansible
-	ansible playbook.yml
+	conda install -c conda-forge jupyter jupyterlab
+	conda upgrade jupyterlab jupyter
+	pip install ansible environment_kernels
+	
+	cd ansible
+	ansible-playbook -i 'localhost,' -c local playbook.yml -e user=ubuntu
+	
+	
