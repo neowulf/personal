@@ -32,3 +32,7 @@ To pull git submodules, perform:
 
 	git submodule init
 	git submodule update
+	conda create -n personal python=3.6
+	source activate personal
+	pip install ansible
+	ansible playbook.yml
