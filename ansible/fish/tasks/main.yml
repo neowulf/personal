@@ -1,6 +1,10 @@
 ---
 
-- include_tasks: install_fish.yml
+- include_tasks: install_fish_ubuntu.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- include_tasks: install_fish_macos.yml
+  when: ansible_distribution == 'MacOSX'
 
 - user:
     name: '{{ user }}'
@@ -14,6 +18,7 @@
     src: '{{ ansible_env.HOME }}/.personal/fish/files/{{ item.src }}'
     dest: '{{ item.dest }}'
     state: link
+
   with_items:
     - { src: 'fish_preexec.fish', dest: '{{ ansible_env.HOME }}/.config/fish/conf.d/fish_preexec.fish'}
     - { src: 'custom.fish', dest: '{{ ansible_env.HOME }}/.config/fish/conf.d/custom.fish'}

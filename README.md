@@ -4,6 +4,16 @@
 
 `vagrant up` to test the installation
 
+### Mac OS X
+
+1. Pre setup
+```bash
+# Install homebrew
+brew install ansible
+ansible-playbook -i 'localhost,' -c local playbook.yml
+
+```
+
 ## What gets installed 
 
 1. bash files
@@ -42,4 +52,7 @@ To pull git submodules, perform:
 	cd ansible
 	ansible-playbook -i 'localhost,' -c local playbook.yml -e user=ubuntu
 	
-	
+## Notes
+
+1. Check variables - `ansible localhost -m setup`
+

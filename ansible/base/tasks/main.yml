@@ -9,6 +9,12 @@
   apt: name="{{ item }}" state=latest update_cache=true
   with_items: '{{ apt_packages }}'
   become: yes
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: 'install mac os x packages'
+  homebrew: name="{{ item }}" state=latest update_homebrew=yes
+  with_items: '{{ brew_packages }}'
+  when: ansible_distribution == 'MacOSX'
 
 - name: 'Create configuration directory structure'
   file:
@@ -22,5 +28,6 @@
     src: '{{ ansible_env.HOME }}/.personal/base/files/{{ item.src }}'
     dest: '{{ item.dest_dir | default(ansible_env.HOME) }}/{{ item.dest | default(item.src) }}'
     state: link
+    force: yes
   with_items: '{{ config_files }}'
   become: '{{ item.become | default("no") }}'

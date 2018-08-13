@@ -7,10 +7,18 @@
 - name: Check if tmux exists
   stat:
     path: /usr/local/bin/tmux
-  register: tmux
+  register: tmux_stats
 
-- include_tasks: install_tmux.yml
-  when: tmux.stat.islnk is not defined
+- include_tasks: install_tmux_ubuntu.yml
+  when: tmux_stats.stat.islnk is not defined and (ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu')
+
+
+- name: Install tmux via homebrew
+  homebrew: name="{{ item }}" state=latest update_homebrew=yes
+  with_items:
+    - tmux
+    - reattach-to-user-namespace
+  when: ansible_distribution == 'MacOSX'
 
 - name: Copy tmux config
   file:

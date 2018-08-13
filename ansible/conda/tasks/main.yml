@@ -15,12 +15,13 @@
 - name: 'install dependency for the mitmproxy'
   apt: name='libssl-dev' state=latest update_cache=true
   become: yes
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: Create default conda environment
   shell: >
     /usr/local/anaconda/bin/conda env create --force --quiet --file {{ ansible_env.HOME }}/.personal/conda/files/conda_environment.yml
   args:
-    executable: /usr/bin/fish
+    executable: fish
 
 #- name: Link conda.sh
 #  file:
@@ -33,5 +34,5 @@
   remote_user: ubuntu
   shell: >-
     /usr/local/anaconda/bin/conda activate py36;
-    /home/ubuntu/.conda/envs/py36/bin/jupyter contrib nbextension install --sys-prefix;
-    /home/ubuntu/.conda/envs/py36/bin/jupyter nbextensions_configurator enable --sys-prefix
+    {{ ansible_env.HOME }}/.conda/envs/py36/bin/jupyter contrib nbextension install --sys-prefix;
+    {{ ansible_env.HOME }}/.conda/envs/py36/bin/jupyter nbextensions_configurator enable --sys-prefix

@@ -1,6 +1,14 @@
 ---
-- name: Install VIM
+- name: Install VIM via apt
   apt: name=vim state=latest
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: Install VIM via homebrew
+  homebrew:
+    name: vim
+    state: latest
+    update_homebrew: yes
+  when: ansible_distribution == 'MacOSX'
 
 - name: Copy vim configurations
   file:

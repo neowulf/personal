@@ -15,4 +15,4 @@
     - z
     - foreign-env
   args:
-    executable: /usr/bin/fish
+    executable: fish

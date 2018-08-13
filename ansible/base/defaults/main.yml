@@ -13,6 +13,15 @@ apt_packages:
   - gcc
   - make
 
+brew_packages:
+  - jq
+  - vim
+  - the_silver_searcher
+  - tree
+  - wget
+  - htop-osx
+  - gpg
+
 # src: required
 # dest: default is { src }
 # dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory
