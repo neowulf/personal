@@ -21,7 +21,11 @@ brew_packages:
   - wget
   - htop-osx
   - gpg
-
+  - mysql-client
+  - automake
+  - autoconf
+  - kubernetes-cli
+  - awscli
 # src: required
 # dest: default is { src }
 # dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory

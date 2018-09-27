@@ -23,6 +23,10 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
 " Syntax
 Plugin 'kien/rainbow_parentheses.vim'
+
+" GoLang
+Plugin 'fatih/vim-go'
+
 " Stores current session
 Plugin 'tpope/vim-obsession'
 

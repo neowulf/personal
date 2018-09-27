@@ -77,4 +77,10 @@
   template = /Users/siva/.stCommitMsg
 [credential]
 	UseHttpPath = true
-	helper = !aws codecommit credential-helper $@
+    helper = !aws codecommit credential-helper $@
+
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+[user]
+	email = siva.kommuri@wework.com
+	name = Siva Kommuri

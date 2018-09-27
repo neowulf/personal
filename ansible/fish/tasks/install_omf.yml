@@ -14,5 +14,7 @@
   with_items:
     - z
     - foreign-env
+    - nvm
+    - rvm
   args:
     executable: fish

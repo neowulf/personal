@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-clojure-highlight" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-clojure-static" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-fireplace" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-go" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-obsession" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-slime" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-wakatime" vcs="Git" />
