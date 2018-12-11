@@ -10,7 +10,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/siva/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 [alias]
@@ -80,7 +80,9 @@
     helper = !aws codecommit credential-helper $@
 
 [url "git@github.com:"]
-        insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [user]
 	email = siva.kommuri@wework.com
 	name = Siva Kommuri
+[rerere]
+	enabled = true
