@@ -53,7 +53,7 @@ set number
 
 " Look and feel {{{
 syntax enable
-set background=dark
+set background=light
 " colorscheme solarized
 
 " size of a hard tabstop

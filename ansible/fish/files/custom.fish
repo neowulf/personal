@@ -16,10 +16,11 @@ alias git hub
 
 set -gx LESS "-XgmR"
 
-# bobthefish
-set -g theme_color_scheme  light
+# bobthefish - https://github.com/oh-my-fish/theme-bobthefish
+# set -g theme_color_scheme gruvbox # iterm-theme gruvbox dark
+set -g theme_color_scheme solarized-light
 set -g theme_display_k8s_context yes
-set -g theme_display_virtualenv no
+# set -g theme_display_virtualenv yes
 
 ###################################
 
@@ -30,7 +31,8 @@ end
 
 # alias get-aws-credentials='f(){ cmd="docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/onelogin-aws-saml sh -c \"python /package/samlapi.py "$@"\""; bash -c "${cmd}" unset -f f; }; f'
 function get-aws-credentials
-	docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/onelogin-aws-saml sh -c "python /package/samlapi.py $argv" 
+  #docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/onelogin-aws-saml sh -c "python /package/samlapi.py $argv" 
+  docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/okta-aws sh -c "python /package/samlapi.py $argv"
 end
 
 
@@ -47,3 +49,6 @@ function kube
 	end
 end
 
+#################################
+
+set -gx MAGEFILE_VERBOSE 1
