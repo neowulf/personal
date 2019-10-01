@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/siva.kommuri/.config/fish/conf.d'
-let g:netrw_dirhist_2='/Users/siva.kommuri/go/src/github.com/weconnect/space-resource-group/acceptancetests'
-let g:netrw_dirhist_3='/Users/siva.kommuri/.config/fish/conf.d'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/siva.kommuri/Documents/github/airlock/config'

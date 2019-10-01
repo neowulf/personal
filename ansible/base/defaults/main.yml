@@ -26,6 +26,7 @@ brew_packages:
   - autoconf
   - kubernetes-cli
   - awscli
+  - grip
 # src: required
 # dest: default is { src }
 # dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory

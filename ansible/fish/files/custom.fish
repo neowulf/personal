@@ -18,7 +18,8 @@ set -gx LESS "-XgmR"
 
 # bobthefish - https://github.com/oh-my-fish/theme-bobthefish
 # set -g theme_color_scheme gruvbox # iterm-theme gruvbox dark
-set -g theme_color_scheme solarized-light
+# set -g theme_color_scheme solarized-light
+set -g theme_color_scheme solarized-dark
 set -g theme_display_k8s_context yes
 # set -g theme_display_virtualenv yes
 
@@ -48,6 +49,9 @@ function kube
 		grep -le '^contexts:' ~/.kube/* 2> /dev/null | cut -d '/' -f 5
 	end
 end
+
+set -gx HELM_HOME "/Users/siva.kommuri/.we/.helm"
+set -gx KUBECONFIG "/Users/siva.kommuri/.we/.kube/kubeconfig"
 
 #################################
 

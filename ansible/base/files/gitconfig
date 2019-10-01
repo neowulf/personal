@@ -69,7 +69,7 @@
   rwip = !"git wip '[RCS-000] wip'"
   
 [push]
-  default = simple
+	default = current
 
 [color]
   ui = auto
