@@ -9,10 +9,12 @@ fish_vi_key_bindings
 set -gx PATH /usr/local/opt/mysql-client/bin $PATH
 
 set -gx GOPATH $HOME/go 
-
 set -gx PATH $GOPATH/bin $PATH
+
 alias go colorgo
 alias git hub
+
+set -gx JAVA_HOME (/usr/libexec/java_home)
 
 set -gx LESS "-XgmR"
 
@@ -56,3 +58,15 @@ set -gx KUBECONFIG "/Users/siva.kommuri/.we/.kube/kubeconfig"
 #################################
 
 set -gx MAGEFILE_VERBOSE 1
+
+# https://direnv.net/docs/hook.html#fish
+direnv hook fish | source
+alias tmux "direnv exec / tmux"
+
+# posix-source .env file to load the variables into the shell
+function posix-source
+    for i in (cat $argv)
+        set arr (echo $i |tr = \n)
+          set -gx $arr[1] $arr[2]
+    end
+end

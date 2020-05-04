@@ -84,3 +84,5 @@
 	name = Siva Kommuri
 [rerere]
 	enabled = true
+[url "ssh://git@github.com/weconnect"]
+	insteadOf = https://github.com/weconnect
