@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/siva/.gitignore_global
+  excludesfile = ~/.gitignore_global
   autocrlf = input
   editor = vim
 
@@ -75,12 +75,10 @@
   ui = auto
 
 [commit]
-  template = /Users/siva/.stCommitMsg
+  template = ~/.stCommitMsg
 
-[url "git@github.com:"]
-  insteadOf = https://github.com/
 [user]
-	email = siva.kommuri@wework.com
 	name = Siva Kommuri
+
 [rerere]
 	enabled = true

@@ -2,7 +2,7 @@
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " vim +PluginInstall +qall
 
-set shell=/usr/local/bin/bash
+set shell=/bin/bash
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -53,12 +53,12 @@ filetype indent plugin on
 set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 " Remap esc to tab
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-cnoremap <Tab> <C-C><Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
+" nnoremap <Tab> <Esc>
+" vnoremap <Tab> <Esc>gV
+" onoremap <Tab> <Esc>
+" cnoremap <Tab> <C-C><Esc>
+" inoremap <Tab> <Esc>`^
+" inoremap <Leader><Tab> <Tab>
 
 " Execute the current file in bash. Shortcut key is <F1>
 map <F1> <Esc> :w<CR> :!./%<CR>

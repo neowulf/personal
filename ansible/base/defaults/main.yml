@@ -12,6 +12,7 @@ apt_packages:
   - git
   - gcc
   - make
+  - vim
 
 brew_packages:
   - jq

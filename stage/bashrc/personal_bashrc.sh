@@ -64,8 +64,4 @@ fi
 export MAVEN_OPTS="-Xms128m -Xmx512m"
 export PATH="${JAVA_HOME}:${PERSONAL_DIR}/bin:${PATH}"
 
-# homebrew sbt uses this file
-# http://stackoverflow.com/a/8332600/1216965
-SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-
 source /usr/local/opt/autoenv/activate.sh

@@ -1,2 +1,3 @@
-tmux_tgz_url: https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
-tmux_tgz_chksum: 'sha256:b17cd170a94d7b58c0698752e1f4f263ab6dc47425230df7e53a6435cc7cd7e8'
+tmux_tgz_url: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc2.tar.gz
+# `sha256sum filename`
+tmux_tgz_chksum: 'sha256:41004e75fcf0a4c7cb31df24bfb4b5315b59d5c5afb18466b0f89710d340faa9'

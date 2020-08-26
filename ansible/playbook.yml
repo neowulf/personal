@@ -7,8 +7,8 @@
     - fish
     - tmux
     - vim
-    - andrewrothstein.miniconda
-    - conda
+    # - andrewrothstein.miniconda
+    # - conda
 
 
 # TODO convert ansible_env.HOME to ansible_user_dir
