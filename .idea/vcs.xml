@@ -5,11 +5,13 @@
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/Vundle.vim" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/fish.vim" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/rainbow_parentheses.vim" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/tabular" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-clojure-highlight" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-clojure-static" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-fireplace" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-fish" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-markdown" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-obsession" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-slime" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ansible/vim/files/bundle/vim-wakatime" vcs="Git" />

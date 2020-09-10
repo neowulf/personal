@@ -1,7 +1,8 @@
 # https://launchpad.net/~fish-shell/+archive/ubuntu/release-2
 - name: Subscribe to fish channel
   apt_repository:
-    repo: 'ppa:fish-shell/release-2'
+    repo: 'ppa:fish-shell/release-3'
+    state: present
   become: yes
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 

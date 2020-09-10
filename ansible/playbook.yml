@@ -3,14 +3,13 @@
   vars:
     - user: ubuntu
   roles:
-    - base
-    - fish
-    - tmux
-    - vim
-    # - andrewrothstein.miniconda
+    # - base
+    # - fish
+    # - tmux
+    # - vim
+    - andrewrothstein.miniconda
     # - conda
 
 
 # TODO convert ansible_env.HOME to ansible_user_dir
-# TODO glances, libtools, vmstat, iostat, top, ntop, htop, sar
 # TODO bazel and golang

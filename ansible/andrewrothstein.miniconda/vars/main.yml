@@ -1,7 +1,7 @@
 ---
 ## TODO the urls contain Windows / Linux / MacOSX - need to check whether to use distribution or system
 miniconda_platform : '{{ansible_distribution}}-{{ansible_machine}}'
-miniconda_name : 'Miniconda{{miniconda_python_ver}}-{{miniconda_ver}}-{{miniconda_platform}}'
+miniconda_name : 'Miniconda{{miniconda_python_ver}}-py38_{{miniconda_ver}}-{{miniconda_platform}}'
 miniconda_installer_sh : '{{miniconda_name}}.sh'
 miniconda_installer_url : '{{miniconda_mirror}}/{{miniconda_installer_sh}}'
 miniconda_checksum: '{{miniconda_checksums[miniconda_installer_sh]}}'

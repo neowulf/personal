@@ -13,6 +13,12 @@ apt_packages:
   - gcc
   - make
   - vim
+  - glances
+  # - libtools
+  # - vmstat
+  # - iostat
+  # - top
+  # - ntop
 
 brew_packages:
   - jq
