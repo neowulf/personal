@@ -14,11 +14,14 @@
   homebrew: name="{{ brew_packages }}" state=latest update_homebrew=yes
   when: ansible_distribution == 'MacOSX'
 
+- name: 'install mac os x brew cask packages'
+  homebrew_cask: name="{{ brew_cask_packages }}" upgrade=yes
+  when: ansible_distribution == 'MacOSX'
+
 - name: 'Create configuration directory structure'
   file:
     dest: '{{ item.dest_dir | default(ansible_env.HOME) }}'
     state: directory
-    recurse: yes
   with_items: '{{ config_files }}'
 
 - name: 'Symlink the configuration files'

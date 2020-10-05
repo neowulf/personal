@@ -6,10 +6,11 @@
 - include_tasks: install_fish_macos.yml
   when: ansible_distribution == 'MacOSX'
 
-- user:
+- name: Add for user
+  user:
     name: '{{ user }}'
     shell: /usr/bin/fish
-  become: yes
+  # become: yes
 
 - include_tasks: install_omf.yml
 

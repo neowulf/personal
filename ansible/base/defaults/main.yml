@@ -20,6 +20,9 @@ apt_packages:
   # - top
   # - ntop
 
+brew_cask_packages:
+  - miniconda
+
 brew_packages:
   - jq
   - vim
@@ -34,10 +37,26 @@ brew_packages:
   - kubernetes-cli
   - awscli
   - grip
+  - golang
+  - kubectl
+  - krew
+  - helm
+  - direnv
+  - hub
+  - fzf
+  - shellcheck
+  - watch
+  - coreutils
+  - grep
+  - telnet
+    
+    
+## brew tap wallix/awless; brew install awless
+
+
 # src: required
 # dest: default is { src }
 # dest_dir: default is "{{ ansible_env.HOME }}" or the user's home directory
-
 config_files:
 
   - src: htop

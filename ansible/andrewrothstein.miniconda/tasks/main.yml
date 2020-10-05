@@ -11,7 +11,7 @@
   block:
     - name: download installer...
       become: yes
-      become_user: root
+      # become_user: root
       get_url:
         url: '{{miniconda_installer_url}}'
         dest: /tmp/{{miniconda_installer_sh}}
@@ -21,7 +21,7 @@
 
     - name: installing....
       become: yes
-      become_user: root
+      # become_user: root
       command: /tmp/{{miniconda_installer_sh}} -b -p {{miniconda_install_dir}}
       args:
         creates: '{{miniconda_install_dir}}'
@@ -29,14 +29,14 @@
   always:
     - name: deleting installer...
       become: yes
-      become_user: root
+      # become_user: root
       file:
         path: /tmp/{{miniconda_installer_sh}}
         state: absent
     
 - name: link miniconda...
   become: yes
-  become_user: root
+  # become_user: root
   file:
     src: '{{miniconda_install_dir}}'
     dest: '{{miniconda_link_dir}}'

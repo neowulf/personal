@@ -79,9 +79,11 @@
 
 [user]
 	name = Siva Kommuri
-	email = snv.kommuri@gmail.com
 
 [rerere]
 	enabled = true
-[url "ssh://git@github.com/weconnect"]
-	insteadOf = https://github.com/weconnect
+
+[url "git@gitlab.eng.vmware.com:"]
+	insteadOf = https://gitlab.eng.vmware.com/
+[credential]
+	helper = store

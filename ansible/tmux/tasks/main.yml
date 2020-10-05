@@ -14,10 +14,12 @@
 
 
 - name: Install tmux via homebrew
-  homebrew: name="{{ item }}" state=latest update_homebrew=yes
-  with_items:
-    - tmux
-    - reattach-to-user-namespace
+  homebrew:
+    name:
+      - tmux
+      - reattach-to-user-namespace
+    state: latest
+    update_homebrew: yes
   when: ansible_distribution == 'MacOSX'
 
 - name: Copy tmux config

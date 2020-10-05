@@ -10,6 +10,7 @@ miniconda_ver : '4.8.3'
 # 88.7M 	2020-06-16 14:57:56 	d63adf39f2c220950a063e0529d4ff74
 miniconda_checksums:
   Miniconda3-py38_4.8.3-Linux-x86_64.sh: md5:d63adf39f2c220950a063e0529d4ff74
+  Miniconda3-py38_4.8.3-MacOSX-x86_64.sh: md5:3fe6d972d40ee60f2e8496cf943ad852
 
 miniconda_timeout_seconds: 600
 
