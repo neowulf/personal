@@ -14,9 +14,7 @@ apt_packages:
   - make
   - vim
   - glances
-  - hub
   - direnv
-  - hub
   - libtools
   - vmstat
   - iostat
@@ -45,7 +43,6 @@ brew_packages:
   - krew
   - helm
   - direnv
-  - hub
   - fzf
   - shellcheck
   - watch

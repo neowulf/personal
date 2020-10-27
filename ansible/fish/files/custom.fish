@@ -16,7 +16,6 @@ set -gx GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 #alias go colorgo
-alias git hub
 
 # set -gx JAVA_HOME (/usr/libexec/java_home)
 
