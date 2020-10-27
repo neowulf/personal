@@ -6,3 +6,5 @@
 
 # Use "less -r" as my pager
 --pager=less -r
+
+--ignore-dir={node_modules,site-packages}

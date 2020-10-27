@@ -29,7 +29,7 @@ set -gx EDITOR "vim"
 set -g theme_color_scheme solarized-dark
 set -g theme_display_k8s_context yes
 set -g theme_display_k8s_namespace yes
-set -g theme_newline_cursor yes
+#set -g theme_newline_cursor yes
 set -g theme_display_git yes
 set -g theme_nerd_fonts no
 # set -g theme_display_virtualenv yes

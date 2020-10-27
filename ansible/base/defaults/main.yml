@@ -14,11 +14,14 @@ apt_packages:
   - make
   - vim
   - glances
-  # - libtools
-  # - vmstat
-  # - iostat
-  # - top
-  # - ntop
+  - hub
+  - direnv
+  - hub
+  - libtools
+  - vmstat
+  - iostat
+  - ntop
+  - ripgrep
 
 brew_cask_packages:
   - miniconda

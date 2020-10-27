@@ -83,7 +83,5 @@
 [rerere]
 	enabled = true
 
-[url "git@gitlab.eng.vmware.com:"]
-	insteadOf = https://gitlab.eng.vmware.com/
 [credential]
 	helper = store

@@ -10,7 +10,7 @@
   user:
     name: '{{ user }}'
     shell: /usr/bin/fish
-  # become: yes
+  become: yes  # needed for linux - maybe not for mac os x?
 
 - include_tasks: install_omf.yml
 

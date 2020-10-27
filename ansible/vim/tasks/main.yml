@@ -15,6 +15,7 @@
     src: '{{ ansible_env.HOME }}/.personal/vim/files'
     dest: '{{ ansible_env.HOME }}/.vim'
     state: link
+    force: yes
 
 - name: Clone vundle repo
   git:
