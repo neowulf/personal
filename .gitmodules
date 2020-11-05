@@ -1,3 +1,6 @@
 [submodule "stage/bin/git/git-aliae"]
 	path = stage/bin/git/git-aliae
 	url = https://github.com/ConradIrwin/git-aliae
+[submodule "ansible/fish/fish.tmbundle"]
+	path = ansible/fish/fish.tmbundle
+	url = https://github.com/sanssecours/Fish.tmbundle.git
