@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../gitlab/dotfiles/dotfiles.iml" filepath="$PROJECT_DIR$/../../gitlab/dotfiles/dotfiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal.iml" filepath="$PROJECT_DIR$/personal.iml" />
     </modules>
   </component>

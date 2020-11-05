@@ -1,0 +1,13 @@
+k9s:
+  refreshRate: 2
+  enableMouse: true
+  headless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false

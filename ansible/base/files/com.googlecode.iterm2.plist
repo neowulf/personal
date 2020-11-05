@@ -50,7 +50,7 @@
 	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
 	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
 	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
-	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
+	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0BzsZ2yLQ5W0iUmNzhe
 	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
 	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
 	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
@@ -74,7 +74,9 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>2896 693 799 448 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1792 148 1494 949 1792 -80 1920 1200 </string>
+	<string>329 23 1612 1234 0 0 2048 1257 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>10 11 730 573 0 0 2048 1257 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1035,16 +1037,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2048, 1280}}</string>
+		<string>{{1792, -222}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{838, 1048}</string>
+		<string>{2649, 954}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>A11917AC-0DC3-447E-B215-321167287A3D</string>
 	<key>NoSyncLastTipTime</key>
-	<real>624488989.00162995</real>
+	<real>625508417.27180898</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>16</integer>
+	<integer>20</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1776,28 +1778,38 @@
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>0010</string>
+		<string>0026</string>
 		<string>0015</string>
 		<string>0004</string>
+		<string>0030</string>
 		<string>0009</string>
+		<string>0024</string>
 		<string>0013</string>
 		<string>0002</string>
+		<string>0029</string>
 		<string>0018</string>
 		<string>0007</string>
+		<string>0022</string>
 		<string>0011</string>
 		<string>0000</string>
+		<string>0027</string>
 		<string>0016</string>
 		<string>0005</string>
 		<string>0020</string>
+		<string>0025</string>
 		<string>0014</string>
 		<string>0003</string>
 		<string>0019</string>
 		<string>0008</string>
+		<string>0023</string>
 		<string>0012</string>
 		<string>0001</string>
 		<string>000</string>
 		<string>0017</string>
 		<string>0006</string>
+		<string>0028</string>
 		<string>0021</string>
+		<string>0031</string>
 	</array>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
@@ -1836,6 +1848,10 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/siva/Documents/github/personal/ansible/base/files</string>
+	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
+	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1845,7 +1861,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-10-15T15:49:31Z</date>
+	<date>2020-10-27T16:16:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Selection Respects Soft Boundaries</key>
@@ -1854,6 +1870,8 @@
 	<false/>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
+	<key>StretchTabsToFillBar</key>
+	<true/>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Paste History</string>
