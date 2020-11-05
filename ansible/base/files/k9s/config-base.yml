@@ -1,7 +1,9 @@
 k9s:
   refreshRate: 2
+  maxConnRetry: 5
   enableMouse: true
   headless: false
+  crumbsless: false
   readOnly: false
   noIcons: false
   logger:
@@ -11,3 +13,10 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
