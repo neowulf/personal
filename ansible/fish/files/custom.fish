@@ -60,6 +60,11 @@ function kube
 end
 
 alias k "kubectl"
+alias kc "k config get-contexts"
+alias dc "docker-compose"
+alias dcb "docker-compose build --parallel --compress --force-rm --no-cache --pull"
+alias dcd "docker-compose down --rmi all --remove-orphans -v"
+alias dcu "docker-compose up --build"
 
 #################################
 
