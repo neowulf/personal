@@ -1,5 +1,5 @@
 # Enable fish bindings
-# fish_vi_key_bindings
+fish_vi_key_bindings
 
 # Windows Machine
 # set -gx DOCKER_HOST localhost:2375
@@ -9,7 +9,6 @@
 # source /usr/local/lib/anaconda3/etc/fish/conf.d/conda.fish
 # conda activate base
 
-# set -gx PATH /usr/local/opt/mysql-client/bin $PATH
 set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
 
 set -gx GOPATH $HOME/go 
@@ -33,40 +32,16 @@ set -g theme_display_git yes
 set -g theme_nerd_fonts no
 # set -g theme_display_virtualenv yes
 
-###################################
 
-# Update KubePrompts in
-# ~/.config/fish/functions/fish_prompt.fish # 613
+# es - theme
+set fish_command_timer_status_enabled 0
+
+###################################
 
 # https://stackoverflow.com/questions/4421633/who-is-listening-on-a-given-tcp-port-on-mac-os-x
 function pport
   lsof -nP -iTCP:$argv | grep LISTEN
 end
-
-set -gx PATH $PATH $HOME/.krew/bin
-
-#set -gx KUBECTX_IGNORE_FZF 1
-# kube - config management
-# kubectx - context management
-# kubens - namespace management
-function kube
-	if count $argv > /dev/null
-		# switch to the specified config
-		set -gx KUBECONFIG ~/.kube/$argv
-	else
-		# list kube configs
-		grep -le '^contexts:' ~/.kube/* 2> /dev/null | cut -d '/' -f 5
-	end
-end
-
-alias k "kubectl"
-alias kc "k config get-contexts"
-alias dc "docker-compose"
-alias dcb "docker-compose build --parallel --compress --force-rm --no-cache --pull"
-alias dcd "docker-compose down --rmi all --remove-orphans -v"
-alias dcu "docker-compose up --build"
-
-#################################
 
 set -gx MAGEFILE_VERBOSE 1
 
