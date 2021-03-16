@@ -42,7 +42,18 @@ end
 alias k "kubectl"
 alias kc "k config get-contexts | awk '{print $1}'"
 alias kg "k get" 
+alias kd "k describe" 
+alias ke "k edit" 
+
+alias kdump "k cluster-info dump -A --output-directory=/tmp/dump & pushd /tmp/dump"
+
+alias kclear "k config unset current-context"
+alias klist  "k config get-contexts"
+alias kdel   "k config delete-context"
+
 alias dc "docker-compose"
 alias dcb "docker-compose build --parallel --compress --force-rm --no-cache --pull"
-alias dcd "docker-compose down --rmi all --remove-orphans -v"
+alias dcd "docker-compose down --remove-orphans -v"
 alias dcu "docker-compose up --build"
+
+alias bb "k run busybox --image=busybox:latest --rm -it --restart=Never --overrides='{ \"apiVersion\": \"v1\", \"metadata\": {\"annotations\": { \"sidecar.istio.io/inject\":\"false\" } } }' --command --"

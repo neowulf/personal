@@ -13,6 +13,7 @@ set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
 
 set -gx GOPATH $HOME/go 
 set -gx PATH $GOPATH/bin $PATH
+set -gx PATH /usr/local/opt/grep/libexec/gnubin $PATH
 
 #alias go colorgo
 
@@ -32,7 +33,6 @@ set -g theme_display_git yes
 set -g theme_nerd_fonts no
 # set -g theme_display_virtualenv yes
 
-
 # es - theme
 set fish_command_timer_status_enabled 0
 
@@ -42,8 +42,6 @@ set fish_command_timer_status_enabled 0
 function pport
   lsof -nP -iTCP:$argv | grep LISTEN
 end
-
-set -gx MAGEFILE_VERBOSE 1
 
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
