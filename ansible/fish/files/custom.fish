@@ -21,6 +21,7 @@ set -gx PATH /usr/local/opt/grep/libexec/gnubin $PATH
 
 set -gx LESS "-XgmR"
 set -gx EDITOR "vim"
+alias vi vim
 
 # bobthefish - https://github.com/oh-my-fish/theme-bobthefish
 # set -g theme_color_scheme gruvbox # iterm-theme gruvbox dark
@@ -59,3 +60,7 @@ end
 ##################################
 
 source ~/.work/*.config.fish
+
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end

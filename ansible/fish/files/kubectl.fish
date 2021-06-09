@@ -44,6 +44,7 @@ alias kc "k config get-contexts | awk '{print $1}'"
 alias kg "k get" 
 alias kd "k describe" 
 alias ke "k edit" 
+alias kl "k logs -f --tail=100"
 
 alias kdump "k cluster-info dump -A --output-directory=/tmp/dump & pushd /tmp/dump"
 

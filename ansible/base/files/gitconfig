@@ -2,6 +2,19 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   editor = vim
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
 
 [diff]
   submodule = log
@@ -21,11 +34,12 @@
   # git reauthor $START..$END
   reautho = !sh -c 'eval `git log --reverse --topo-order --pretty=format:\"git cherry-pick %H &&  git commit --amend -C %H --author=\\\"%aN <%aE>\\\" && \" $0 ` "echo success" '
 
-  lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(blue)%an%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+  lg = "log --color --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %C(blue)%an%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
   di = "diff --color-words=."
   branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
   cd-root = rev-parse --show-cdup
   dont-commit-changelist = update-index --assume-unchanged
+  taglist = "!git tag --format='%(creatordate:short)%09%(objectname:short)%09%(refname:strip=2)' | sort"
 
   #######	
   # https://gist.github.com/492227
@@ -58,3 +72,8 @@
 
 [credential]
 	helper = store
+[pull]
+	ff = only
+	rebase = false
+[init]
+	templatedir = ~/.git-templates

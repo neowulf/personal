@@ -43,6 +43,9 @@ call vundle#end()            " required
 set number
 set relativenumber
 set pastetoggle=<F3>
+set paste
+" large value causes the cursor to be in the middle of screen when searching
+set scrolloff=99999  
 
 " Look and feel {{{
 syntax on

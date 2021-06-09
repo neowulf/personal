@@ -1,0 +1,5 @@
+hotKey:
+  command-v:
+    shortCut:    Command-v
+    description: mute
+    command: "foo"    
